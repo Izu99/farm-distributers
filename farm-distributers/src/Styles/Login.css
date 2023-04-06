@@ -1,0 +1,77 @@
+.loginPage .leftSide {
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	background: url("../images/login-image.jpg");
+	background-color: #00000048;
+	background-blend-mode: multiply;
+}
+
+
+.loginPage .leftSide .logo {
+	position: relative;
+	top: 35%;
+	width: 35%;
+}
+
+.loginPage .leftSide h2 {
+	position: absolute;
+	top: 55%;
+	left: 15%;
+	font-size: 2.4rem;
+	color: #ffffff;
+	font-weight: 550;
+}
+
+.loginPage .leftSide p {
+	position: absolute;
+	top: 65%;
+	left: 36%;
+	font-size: 1.4rem;
+	color: #ffffff;
+	font-weight: 450;
+}
+
+
+.loginPage .rightSide form {
+	/* background-color: #000000; */
+	width: 38%;
+	height: 28rem;
+	border: 1px solid #ccc9c9;
+	border-radius: 15px;
+	margin-left: 50%;
+	margin-top: 10%;
+	/* padding: 1%; */
+    box-shadow: 0px 0px 40px 0px #b6b2b2;
+}
+
+.loginPage .rightSide form h2 {
+	font-size: 3rem;
+}
+
+.loginPage .rightSide p {
+	text-align: left;
+	margin-left: 20%;
+	font-family: "Inter", sans-serif;
+}
+
+.loginPage .rightSide form input[type="text"],
+.loginPage .rightSide form input[type="password"] {
+	width: 18rem;
+	height: 1.8rem;
+	padding-left: 8px;
+	border-radius: 6px;
+	border: 1px solid #949292;
+	font-family: "Inter", sans-serif;
+}
+.loginPage .rightSide form button {
+	background: #1d371c;
+	border-radius: 10px;
+    width: 14rem;
+    height: 2.2rem;
+    margin-top: 6%;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
