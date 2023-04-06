@@ -1,7 +1,7 @@
-.AddFarmer {
+.DeleteFarmer {
 }
 
-.AddFarmer form {
+.DeleteFarmer form {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -9,50 +9,45 @@
 	margin-top: 5%;
 }
 
-.AddFarmer form h2 {
+.DeleteFarmer .top form h2 {
 	text-align: center;
 	font-size: 2.4rem;
 }
 
-.AddFarmer form .basic-details {
-	display: flex;
-	flex-direction: column;
+
+.DeleteFarmer form .bottom .basic-details {
+	
 	/* align-items: center; */
-	justify-content: center;
+	justify-content: left;
 	font-size: 1.2rem;
 	margin-top: 2%;
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
 }
 
-.AddFarmer form .basic-details label {
+.DeleteFarmer form .bottom .basic-details label {
 	text-align: left;
 	margin-bottom: 1%;
 }
 
-.AddFarmer form .basic-details input {
+.DeleteFarmer form .bottom .basic-details input {
+	position: absolute;
+	left: 650px;
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
 	border-radius: 5px;
-	padding-left: 1%;
 }
 
-.AddFarmer form .right {
-	position: absolute;
-	right: 15%;
-	top: 260px;
+.DeleteFarmer form .top img {
+	width: 25%;
 }
 
-.AddFarmer form .right img {
-	width: 75%;
+.DeleteFarmer form .bottom .basic-details input {
+	/* opacity: 0; */
 }
 
-.AddFarmer form .right .basic-details input {
-	opacity: 0;
-}
-
-.AddFarmer form button {
+.DeleteFarmer form button {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1D371C;
@@ -62,5 +57,6 @@
 	border-radius: 10px;
 	color: #ffffff;
 	font-size: 16px;
-	font-weight: 450
+	font-weight: 450;
+	margin-left: 15px;
 }

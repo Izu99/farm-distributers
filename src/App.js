@@ -11,6 +11,7 @@ import "./App.css";
 import Login from "./Components/Login";
 import Header from "./Components/NavBar";
 import LeftSidebar from "./Components/LeftSidebar";
+import DeleteFarmer from "./Components/DeleteFarmer";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 						<Route exact path='/login' component={Login} />
 						<Route path='/Header' component={Header} />
 						<Route path='/LeftSidebar' component={LeftSidebar} />
+						<Route path='/deletefarmer' component={DeleteFarmer} />
 						<Redirect to='login' component={Login} />
 					</Switch>
 				</Router>
