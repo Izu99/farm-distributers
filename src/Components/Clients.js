@@ -1,8 +1,15 @@
 import React from 'react'
 
-function Clients() {
+function Clients(props) {
+  const handleClick = props.handleClick;
   return (
-    <div>Clients</div>
+    <div>
+       <div className='clientsPage'>Clients
+      <button onClick={() => handleClick("addClients")}>Add Clients</button>
+
+  
+    </div>
+    </div>
   )
 }
 

@@ -4,7 +4,7 @@ import '../Styles/DeleteConfirmation.css'
 function DeleteConfirmation(props) {
   return (
     <div className="delete-confirmation">
-      <h2>Are you sure you want to delete?</h2>
+      <h2>Do you want to delete Farmer?</h2>
       <div className="buttons">
         <button className="cancel-button" onClick={props.onCancel}>
           Cancel

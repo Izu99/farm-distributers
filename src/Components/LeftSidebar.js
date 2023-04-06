@@ -13,9 +13,12 @@ import Clients from "./Clients";
 import AddFarmer from './AddFarmer';
 import logo from '../images/navbar-logo.svg'
 import axios from 'axios';
+import AddVendor from './AddVendor'
+import AddProducts from "./AddProducts";
+import AddClients from "./AddClients";
 
 const LeftSidebar = () => {
-	const [active, setActive] = useState("addFarmer"); // Set the default active component to Dashboard
+	const [active, setActive] = useState("addVendor"); // Set the default active component to Dashboard
 
 	const handleClick = (component) => {
 		setActive(component); // Update the active state when an icon is clicked
@@ -61,10 +64,13 @@ const LeftSidebar = () => {
 				{/* Conditionally render the corresponding component based on the active state */}
 				{active === "dashboard" && <Dashboard />}
 				{active === "farmer" && <Farmer handleClick={handleClick} />}
-				{active === "vendor" && <Vendor />}
-				{active === "products" && <Products />}
-				{active === "clients" && <Clients />}
+				{active === "vendor" && <Vendor handleClick={handleClick} />}
+				{active === "products" && <Products handleClick={handleClick} />}
+				{active === "clients" && <Clients handleClick={handleClick} />}
 				{active === "addFarmer" && <AddFarmer />}
+				{active === "addVendor" && <AddVendor />}        
+				{active === "addProducts" && <AddProducts />}
+				{active === "addClients" && <AddClients />}
 			</div>
 		</div>
 	);
