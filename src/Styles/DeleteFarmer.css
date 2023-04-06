@@ -57,7 +57,7 @@
 	/* opacity: 0; */
 }
 
-.DeleteFarmer form button {
+.DeleteFarmer form button[type=submit] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
