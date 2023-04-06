@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1D371C;
+    height: 6.5rem;
+    padding: 0 4% 0 0;
+  }
+
+ .header .header-logo {
+    width: 3.6rem;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ffffff;
+    padding: 100%;
+  }
+  
+  
+ .header .header-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .header-icons a {
+    text-decoration: none;
+    margin: 18%;
+  }
+  /*  */
+  .header .header-icons i {
+    object-fit: contain;
+    color: #ffffff;
+    /* background-color: #51e04c; */
+    font-size: 1.4rem;
+    
+    
+  }
+
+  .header .header-icons i:nth-child(1) {
+    display: block;
+    
+  }

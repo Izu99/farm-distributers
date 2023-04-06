@@ -9,7 +9,8 @@ import {
 import "./App.css";
 
 import Login from "./Components/Login";
-import header from "./Components/header";
+import Header from "./Components/NavBar";
+import LeftSidebar from "./Components/LeftSidebar";
 
 function App() {
 	return (
@@ -18,7 +19,9 @@ function App() {
 				<Router>
 					<Switch>
 						<Route exact path='/login' component={Login} />
-						<Route path='header' component={header} />
+						<Route path='/Header' component={Header} />
+						<Route path='/LeftSidebar' component={LeftSidebar} />
+						<Redirect to='login' component={Login} />
 					</Switch>
 				</Router>
 			</div>
