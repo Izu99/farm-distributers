@@ -1,4 +1,5 @@
 .DeleteFarmer {
+	text-align: left;
 }
 
 .DeleteFarmer form {
@@ -9,39 +10,48 @@
 	margin-top: 5%;
 }
 
-.DeleteFarmer .top form h2 {
-	text-align: center;
-	font-size: 2.4rem;
+.DeleteFarmer form .top img {
+	margin-left: 38%;
+	width: 25%;
 }
 
+.DeleteFarmer form .top h2 {
+	text-align: center;
+	font-size: 2.4rem;
+	color: #1d371c;
+	margin: 0;
+}
+
+.DeleteFarmer form .top p {
+	text-align: center;
+	margin-bottom: 15px;
+}
 
 .DeleteFarmer form .bottom .basic-details {
-	
 	/* align-items: center; */
 	justify-content: left;
 	font-size: 1.2rem;
 	margin-top: 2%;
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
+	padding: 0.6rem;
 }
 
 .DeleteFarmer form .bottom .basic-details label {
-	text-align: left;
+	text-align: center;
 	margin-bottom: 1%;
+	margin-left: 15%;
 }
 
 .DeleteFarmer form .bottom .basic-details input {
 	position: absolute;
-	left: 650px;
+	left: 35rem;
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
 	border-radius: 5px;
 }
 
-.DeleteFarmer form .top img {
-	width: 25%;
-}
 
 .DeleteFarmer form .bottom .basic-details input {
 	/* opacity: 0; */
@@ -50,13 +60,13 @@
 .DeleteFarmer form button {
 	margin-top: 5%;
 	margin-bottom: 10%;
-	background-color: #1D371C;
+	background-color: #1d371c;
 	width: 18rem;
 	height: 2.6rem;
 	border: none;
 	border-radius: 10px;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 1.185rem;
 	font-weight: 450;
-	margin-left: 15px;
+	margin-left: 10rem;
 }
