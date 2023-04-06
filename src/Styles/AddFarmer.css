@@ -4,13 +4,14 @@
 .AddFarmer form {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
+	height: auto;
 	margin-left: 10%;
 	margin-top: 5%;
 }
 
 .AddFarmer form h2 {
 	text-align: center;
-    font-size: 2.4rem;
+	font-size: 2.4rem;
 }
 
 .AddFarmer form .basic-details {
@@ -26,7 +27,6 @@
 
 .AddFarmer form .basic-details label {
 	text-align: left;
-
 	margin-bottom: 1%;
 }
 
@@ -39,13 +39,22 @@
 }
 
 .AddFarmer form .right {
-    position: relative;
-    left: 450px;
-    bottom: 550px;
-
+	position: absolute;
+	right: 15%;
+	top: 260px;
 }
 
 .AddFarmer form .right .basic-details input {
-    opacity: 0;
+	opacity: 0;
 }
 
+.AddFarmer form button {
+	margin-top: 5%;
+	margin-bottom: 10%;
+	background-color: #1D371C;
+	width: 18rem;
+	height: 2.6rem;
+	border: none;
+	border-radius: 10px;
+	color: #ffffff;
+}

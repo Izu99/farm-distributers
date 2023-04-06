@@ -5,16 +5,17 @@
     background-color: #1D371C;
     height: 6.5rem;
     padding: 0 4% 0 0;
+    width: 82vw;
   }
 
- .header .header-logo {
-    width: 3.6rem;
-    height: 100%;
-    object-fit: cover;
-    background-color: #ffffff;
-    padding: 100%;
+  .header p {
+    margin-left: 2%;
+    font-size: 2rem;
+    font-weight: 450;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
   }
-  
+
   
  .header .header-icons {
     display: flex;

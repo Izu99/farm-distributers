@@ -6,7 +6,6 @@ import Header from "./NavBar";
 function AddFarmer() {
 	return (
 		<div className='AddFarmerPage'>
-			
 			<Header />
 			<div className='AddFarmer'>
 				<form
@@ -57,13 +56,14 @@ function AddFarmer() {
 					<div className='right'>
 						<div className='basic-details'>
 							<label htmlFor='fileInput'>
+								<p>Add Image</p>
 								<img src={img1} alt='imageicon' />
 							</label>
 							<input type='file' id='fileInput' />
 						</div>
 					</div>
 
-					<input type='submit' value='Add Farmer' />
+					<button type='submit'>Add Farmer</button>
 				</form>
 			</div>
 		</div>

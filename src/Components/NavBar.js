@@ -7,7 +7,8 @@ import logo from '../images/navbar-logo.svg';
 function Header() {
   return (
     <nav className="header">
-      <a href="#"><img src={logo} alt="Logo" className="header-logo" /></a>
+      {/* <a href="#"><img src={logo} alt="Logo" className="header-logo" /></a> */}
+      <p>Ponniyin Selvan</p>
       <div className="header-icons">
         <a href="#"><i class="fa-solid fa-bell"></i></a>
         <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>

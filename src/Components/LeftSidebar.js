@@ -11,6 +11,7 @@ import Vendor from "./Vendor";
 import Products from "./Products";
 import Clients from "./Clients";
 import AddFarmer from './AddFarmer';
+import logo from '../images/navbar-logo.svg'
 
 const LeftSidebar = () => {
 	const [active, setActive] = useState("addFarmer"); // Set the default active component to Dashboard
@@ -22,6 +23,7 @@ const LeftSidebar = () => {
 	return (
 		<div className='Page'>
 			<div className='left-sidebar'>
+				<img src={logo} alt="" className="header-logo"/>
 				<div
 					className={`icon ${active === "dashboard" ? "active" : ""}`}
 					onClick={() => handleClick("dashboard")}>
