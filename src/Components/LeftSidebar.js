@@ -12,6 +12,7 @@ import Products from "./Products";
 import Clients from "./Clients";
 import AddFarmer from './AddFarmer';
 import logo from '../images/navbar-logo.svg'
+import axios from 'axios';
 
 const LeftSidebar = () => {
 	const [active, setActive] = useState("addFarmer"); // Set the default active component to Dashboard
