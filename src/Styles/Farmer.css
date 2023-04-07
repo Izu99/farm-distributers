@@ -26,40 +26,41 @@
 	font-size: 1rem;
 }
 
-.farmerPage .users {
-    margin-top: 2%;
-    display: flex;
-    flex-wrap: wrap;
+.farmerPage table {
+    margin-top: 5%;
+	width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.farmerPage table .users {
+    height: 76%;
+    border-width: 15px;	
 }
 
 .farmerPage .users .user {
-    border: 2px solid #a3a3a3;
-    display: flex;
+	border: 2px solid #a3a3a32f;
     padding: 1%;
-    margin-left: 4%;
-    border-radius: 35px;
-    width: 26%;
-    margin-bottom: 2%;
+	border-radius: 35px;
+	margin-bottom: 2%;
 }
 
 .farmerPage .users .user img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    border: 1px solid #0000003b;
-    padding: 0.6%;
-
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	border: 1px solid #0000003b;
+	padding: 0.6%;
 }
 
 .farmerPage .users .user .details {
-    margin-left: 2.25%;
+     margin: -28% 0 0 30%;
 }
 
 .farmerPage .users .user .details h2 {
-    margin: 10% 0 0 0;
-
+    font-size: 1.4rem;
 }
 
 .farmerPage .users .user .details p {
-    margin-top: 6%;
+    margin-top: -6%;
 } 
