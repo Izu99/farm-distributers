@@ -16,6 +16,7 @@ import axios from 'axios';
 import AddVendor from './AddVendor'
 import AddProducts from "./AddProducts";
 import AddClients from "./AddClients";
+import ProfileFarmer from "./ProfileFarmer";
 
 const LeftSidebar = () => {
 	const [active, setActive] = useState("addVendor"); // Set the default active component to Dashboard
@@ -67,7 +68,7 @@ const LeftSidebar = () => {
 				{active === "vendor" && <Vendor handleClick={handleClick} />}
 				{active === "products" && <Products handleClick={handleClick} />}
 				{active === "clients" && <Clients handleClick={handleClick} />}
-				{active === "addFarmer" && <AddFarmer />}
+				{active === "addFarmer" && <ProfileFarmer />}
 				{active === "addVendor" && <AddVendor />}        
 				{active === "addProducts" && <AddProducts />}
 				{active === "addClients" && <AddClients />}

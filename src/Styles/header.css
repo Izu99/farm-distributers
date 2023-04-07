@@ -3,14 +3,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: #1D371C;
-    height: 6.5rem;
+    height: 5.5rem;
     padding: 0 4% 0 0;
     width: 82vw;
   }
 
   .header p {
     margin-left: 2%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 450;
     font-family: 'Inter', sans-serif;
     color: #ffffff;

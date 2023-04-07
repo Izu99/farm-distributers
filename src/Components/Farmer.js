@@ -1,5 +1,7 @@
 import React from 'react'
 import '../Styles/Farmer.css'
+import img1 from '../images/dashboard-img1.svg'
+import img2 from '../images/dashboard-img2.svg'
 
 
 function Farmer(props) {

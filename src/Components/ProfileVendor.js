@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Styles/ProfileVendor.css";
 import profileImg from "../images/profile-img.png";
 import DeleteConfirmation from "./DeleteConfirmation";
+import Header from "./NavBar";
 
 function ProfileVendor() {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -21,6 +22,7 @@ function ProfileVendor() {
 
   return (
     <div className="ProfileVendor">
+      <Header />
       <form action="">
         <div className="top">
           <img src={profileImg} alt="" />
