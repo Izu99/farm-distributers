@@ -1,8 +1,8 @@
-.DeleteVendor {
+.ProfileProducts {
 	text-align: left;
 }
 
-.DeleteVendor form {
+.ProfileProducts form {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -10,24 +10,24 @@
 	margin-top: 5%;
 }
 
-.DeleteVendor form .top img {
+.ProfileProducts form .top img {
 	margin-left: 38%;
 	width: 25%;
 }
 
-.DeleteVendor form .top h2 {
+.ProfileProducts form .top h2 {
 	text-align: center;
 	font-size: 2.4rem;
 	color: #1d371c;
 	margin: 0;
 }
 
-.DeleteVendor form .top p {
+.ProfileProducts form .top p {
 	text-align: center;
 	margin-bottom: 15px;
 }
 
-.DeleteVendor form .bottom .basic-details {
+.ProfileProducts form .bottom .basic-details {
 	/* align-items: center; */
 	justify-content: left;
 	font-size: 1.2rem;
@@ -37,27 +37,28 @@
 	padding: 0.6rem;
 }
 
-.DeleteVendor form .bottom .basic-details label {
+.ProfileProducts form .bottom .basic-details label {
 	text-align: center;
 	margin-bottom: 1%;
 	margin-left: 15%;
 }
 
-.DeleteVendor form .bottom .basic-details input {
+.ProfileProducts form .bottom .basic-details input {
 	position: absolute;
 	left: 35rem;
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
 	border-radius: 5px;
+	padding-left: 1%;
 }
 
 
-.DeleteVendor form .bottom .basic-details input {
+.ProfileProducts form .bottom .basic-details input {
 	/* opacity: 0; */
 }
 
-.DeleteVendor form button[type=submit] {
+.ProfileProducts form button[type=submit] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
@@ -69,4 +70,8 @@
 	font-size: 1.185rem;
 	font-weight: 450;
 	margin-left: 10rem;
+}
+
+.ProfileProducts form button[type=submit]:hover {
+	background-color: #132912;
 }

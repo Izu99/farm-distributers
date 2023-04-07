@@ -1,8 +1,8 @@
-.DeleteClients {
+.ProfileClients {
 	text-align: left;
 }
 
-.DeleteClients form {
+.ProfileClients form {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -10,24 +10,24 @@
 	margin-top: 5%;
 }
 
-.DeleteClients form .top img {
+.ProfileClients form .top img {
 	margin-left: 38%;
 	width: 25%;
 }
 
-.DeleteClients form .top h2 {
+.ProfileClients form .top h2 {
 	text-align: center;
 	font-size: 2.4rem;
 	color: #1d371c;
 	margin: 0;
 }
 
-.DeleteClients form .top p {
+.ProfileClients form .top p {
 	text-align: center;
 	margin-bottom: 15px;
 }
 
-.DeleteClients form .bottom .basic-details {
+.ProfileClients form .bottom .basic-details {
 	/* align-items: center; */
 	justify-content: left;
 	font-size: 1.2rem;
@@ -37,13 +37,13 @@
 	padding: 0.6rem;
 }
 
-.DeleteClients form .bottom .basic-details label {
+.ProfileClients form .bottom .basic-details label {
 	text-align: center;
 	margin-bottom: 1%;
 	margin-left: 15%;
 }
 
-.DeleteClients form .bottom .basic-details input {
+.ProfileClients form .bottom .basic-details input {
 	position: absolute;
 	left: 35rem;
 	width: 37%;
@@ -54,11 +54,11 @@
 }
 
 
-.DeleteClients form .bottom .basic-details input {
+.ProfileClients form .bottom .basic-details input {
 	/* opacity: 0; */
 }
 
-.DeleteClients form button[type=submit] {
+.ProfileClients form button[type=submit] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
@@ -72,6 +72,6 @@
 	margin-left: 10rem;
 }
 
-.DeleteClients form button[type=submit]:hover {
+.ProfileClients form button[type=submit]:hover {
 	background-color: #132912;
 }

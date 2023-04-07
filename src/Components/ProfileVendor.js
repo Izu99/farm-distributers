@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../Styles/DeleteVendor.css";
+import "../Styles/ProfileVendor.css";
 import profileImg from "../images/profile-img.png";
 import DeleteConfirmation from "./DeleteConfirmation";
 
-function DeleteVendor() {
+function ProfileVendor() {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
   const handleDeleteClick = () => {
@@ -20,7 +20,7 @@ function DeleteVendor() {
   };
 
   return (
-    <div className="DeleteVendor">
+    <div className="ProfileVendor">
       <form action="">
         <div className="top">
           <img src={profileImg} alt="" />
@@ -68,4 +68,4 @@ function DeleteVendor() {
   );
 }
 
-export default DeleteVendor;
+export default ProfileVendor;

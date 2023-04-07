@@ -11,11 +11,11 @@ import "./App.css";
 import Login from "./Components/Login";
 import Header from "./Components/NavBar";
 import LeftSidebar from "./Components/LeftSidebar";
-import DeleteFarmer from "./Components/DeleteFarmer";
+import ProfileFarmer from "./Components/ProfileFarmer";
 import AddFarmer from "./Components/AddFarmer";
-import DeleteVendor from "./Components/DeleteVendor";
-import DeleteClients from "./Components/DeleteClients";
-import DeleteProducts from "./Components/DeleteProducts";
+import ProfileVendor from "./Components/ProfileVendor";
+import ProfileClients from "./Components/ProfileClients";
+import ProfileProducts from "./Components/ProfileProducts";
 import EditFarmer from "./Components/EditFarmer";
 import EditClients from "./Components/EditClients";
 import EditProducts from "./Components/EditProducts";
@@ -32,10 +32,10 @@ function App() {
 						<Route exact path='/LeftSidebar' component={LeftSidebar} />
 						<Route exact path='/Login' component={Login} />
 						<Route exact path='/AddFarmer' component={AddFarmer} />
-						<Route path='/DeleteFarmer' component={DeleteFarmer} />
-						<Route path='/DeleteVendor' component={DeleteVendor} />
-						<Route path='/DeleteClients' component={DeleteClients} />
-						<Route path='/DeleteProducts' component={DeleteProducts} />
+						<Route path='/ProfileFarmer' component={ProfileFarmer} />
+						<Route path='/ProfileVendor' component={ProfileVendor} />
+						<Route path='/ProfileClients' component={ProfileClients} />
+						<Route path='/ProfileProducts' component={ProfileProducts} />
 						<Route path='/EditFarmer' component={EditFarmer} />
 						<Route path='/EditClients' component={EditClients} />
 						<Route path='/EditProducts' component={EditProducts} />
