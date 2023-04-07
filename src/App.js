@@ -13,6 +13,9 @@ import Header from "./Components/NavBar";
 import LeftSidebar from "./Components/LeftSidebar";
 import DeleteFarmer from "./Components/DeleteFarmer";
 import AddFarmer from "./Components/AddFarmer";
+import DeleteVendor from "./Components/DeleteVendor";
+import DeleteClients from "./Components/DeleteClients";
+import DeleteProducts from "./Components/DeleteProducts";
 
 function App() {
 	return (
@@ -25,6 +28,11 @@ function App() {
 						<Route exact path='/LeftSidebar' component={LeftSidebar} />
 						<Route exact path='/Login' component={Login} />
 						<Route exact path='/AddFarmer' component={AddFarmer} />
+						<Route path='/DeleteFarmer' component={DeleteFarmer} />
+						<Route path='/DeleteVendor' component={DeleteVendor} />
+						<Route path='/DeleteClients' component={DeleteClients} />
+						<Route path='/DeleteProducts' component={DeleteProducts} />
+						
 
 					</Switch>
 				</Router>

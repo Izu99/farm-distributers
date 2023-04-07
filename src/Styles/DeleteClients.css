@@ -1,8 +1,8 @@
-.DeleteFarmer {
+.DeleteClients {
 	text-align: left;
 }
 
-.DeleteFarmer form {
+.DeleteClients form {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -10,24 +10,24 @@
 	margin-top: 5%;
 }
 
-.DeleteFarmer form .top img {
+.DeleteClients form .top img {
 	margin-left: 38%;
 	width: 25%;
 }
 
-.DeleteFarmer form .top h2 {
+.DeleteClients form .top h2 {
 	text-align: center;
 	font-size: 2.4rem;
 	color: #1d371c;
 	margin: 0;
 }
 
-.DeleteFarmer form .top p {
+.DeleteClients form .top p {
 	text-align: center;
 	margin-bottom: 15px;
 }
 
-.DeleteFarmer form .bottom .basic-details {
+.DeleteClients form .bottom .basic-details {
 	/* align-items: center; */
 	justify-content: left;
 	font-size: 1.2rem;
@@ -37,13 +37,13 @@
 	padding: 0.6rem;
 }
 
-.DeleteFarmer form .bottom .basic-details label {
+.DeleteClients form .bottom .basic-details label {
 	text-align: center;
 	margin-bottom: 1%;
 	margin-left: 15%;
 }
 
-.DeleteFarmer form .bottom .basic-details input {
+.DeleteClients form .bottom .basic-details input {
 	position: absolute;
 	left: 35rem;
 	width: 37%;
@@ -54,11 +54,11 @@
 }
 
 
-.DeleteFarmer form .bottom .basic-details input {
+.DeleteClients form .bottom .basic-details input {
 	/* opacity: 0; */
 }
 
-.DeleteFarmer form button[type=submit] {
+.DeleteClients form button[type=submit] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
@@ -72,6 +72,6 @@
 	margin-left: 10rem;
 }
 
-.DeleteFarmer form button[type=submit]:hover {
+.DeleteClients form button[type=submit]:hover {
 	background-color: #132912;
 }

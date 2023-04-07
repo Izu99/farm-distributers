@@ -30,12 +30,17 @@
 	margin-bottom: 1%;
 }
 
-.AddProducts form .basic-details input {
+.AddProducts form .basic-details input, .AddProducts form .basic-details select {
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
 	border-radius: 5px;
 	padding-left: 1%;
+}
+
+.AddProducts form .basic-details select {
+	width: 38.2%;
+	height: 2.2rem;
 }
 
 .AddProducts form .right {
@@ -44,12 +49,17 @@
 	top: 260px;
 }
 
+.AddProducts form .right label {
+	width: 100%;
+}
+
 .AddProducts form .right img {
-	width: 75%;
+	width: 75%;cursor: pointer;
 }
 
 .AddProducts form .right .basic-details input {
 	opacity: 0;
+	
 }
 
 .AddProducts form button {

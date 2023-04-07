@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../Styles/AddClients.css";
+import "../Styles/EditFarmer.css";
 import img1 from "../images/drag-and-drop-image.svg";
 import Header from "./NavBar";
 import axios from "axios";
 
-export default class AddClients extends Component {
+export default class EditFarmer extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangevName = this.onChangevName.bind(this);
@@ -85,7 +85,7 @@ export default class AddClients extends Component {
 
 		// if(this.state.cNumber.length > 4){
 
-		axios.post("http://localhost:4000/Clients/add", obj).then((res) => {
+		axios.post("http://localhost:4000/farmer/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				vName: "",
@@ -111,15 +111,15 @@ export default class AddClients extends Component {
 
 	render() {
 		return (
-			<div className='AddClientsPage'>
+			<div className='EditFarmerPage'>
 				<Header />
-				<div className='AddClients'>
+				<div className='EditFarmer'>
 					<form
 						onSubmit={this.onSubmit}
-						action='submit-Clients.php'
+						action='submit-farmer.php'
 						method='post'
 						enctype='multipart/form-data'>
-						<h2>Add New Clients</h2>
+						<h2>Edit Farmer</h2>
 						<div className='left'>
 							<div className='basic-details'>
 								<label for='first-name'>First Name:</label>
@@ -219,7 +219,7 @@ export default class AddClients extends Component {
 							</div>
 						</div>
 
-						<button type='submit'>Add Clients</button>
+						<button type='submit'>Add Farmer</button>
 					</form>
 				</div>
 			</div>
