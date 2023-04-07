@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../Styles/EditFarmer.css";
+import "../Styles/EditClients.css";
 import img1 from "../images/drag-and-drop-image.svg";
 // import Header from "./NavBar";
 import axios from "axios";
 
-export default class EditFarmer extends Component {
+export default class EditClients extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangevName = this.onChangevName.bind(this);
@@ -111,15 +111,15 @@ export default class EditFarmer extends Component {
 
 	render() {
 		return (
-			<div className='EditFarmerPage'>
+			<div className='EditClientsPage'>
 				{/* <Header /> */}
-				<div className='EditFarmer'>
+				<div className='EditClients'>
 					<form
 						onSubmit={this.onSubmit}
 						action='submit-farmer.php'
 						method='post'
 						enctype='multipart/form-data'>
-						<h2>Edit Farmer</h2>
+						<h2>Edit Clients</h2>
 						<div className='left'>
 							<div className='basic-details'>
 								<label for='first-name'>First Name:</label>

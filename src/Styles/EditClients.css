@@ -1,0 +1,66 @@
+.EditClients {
+}
+
+.EditClients form {
+	/* background-color: rgb(90, 159, 219); */
+	width: 75%;
+	height: auto;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.EditClients form h2 {
+	text-align: center;
+	font-size: 2.4rem;
+}
+
+.EditClients form .basic-details {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+	font-size: 1.2rem;
+	margin-top: 2%;
+	font-family: "Poppins", sans-serif;
+	font-style: normal;
+}
+
+.EditClients form .basic-details label {
+	text-align: left;
+	margin-bottom: 1%;
+}
+
+.EditClients form .basic-details input {
+	width: 37%;
+	height: 2.1rem;
+	border: 1px solid rgba(0, 0, 0, 0.219);
+	border-radius: 5px;
+	padding-left: 1%;
+}
+
+.EditClients form .right {
+	position: absolute;
+	right: 15%;
+	top: 260px;
+}
+
+.EditClients form .right img {
+	width: 75%;
+}
+
+.EditClients form .right .basic-details input {
+	opacity: 0;
+}
+
+.EditClients form button {
+	margin-top: 5%;
+	margin-bottom: 10%;
+	background-color: #1D371C;
+	width: 18rem;
+	height: 2.6rem;
+	border: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 450
+}

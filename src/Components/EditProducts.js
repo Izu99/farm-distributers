@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../Styles/EditFarmer.css";
+import "../Styles/EditProducts.css";
 import img1 from "../images/drag-and-drop-image.svg";
 // import Header from "./NavBar";
 import axios from "axios";
 
-export default class EditFarmer extends Component {
+export default class EditProducts extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangevName = this.onChangevName.bind(this);
@@ -85,7 +85,7 @@ export default class EditFarmer extends Component {
 
 		// if(this.state.cNumber.length > 4){
 
-		axios.post("http://localhost:4000/farmer/add", obj).then((res) => {
+		axios.post("http://localhost:4000/Products/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				vName: "",
@@ -111,18 +111,18 @@ export default class EditFarmer extends Component {
 
 	render() {
 		return (
-			<div className='EditFarmerPage'>
+			<div className='EditProductsPage'>
 				{/* <Header /> */}
-				<div className='EditFarmer'>
+				<div className='EditProducts'>
 					<form
 						onSubmit={this.onSubmit}
-						action='submit-farmer.php'
+						action='submit-Products.php'
 						method='post'
 						enctype='multipart/form-data'>
-						<h2>Edit Farmer</h2>
+						<h2>Edit Products</h2>
 						<div className='left'>
 							<div className='basic-details'>
-								<label for='first-name'>First Name:</label>
+								<label for='first-name'>Product Name</label>
 								<input
 									type='text'
 									id='first-name'
@@ -134,7 +134,7 @@ export default class EditFarmer extends Component {
 							</div>
 
 							<div className='basic-details'>
-								<label for='last-name'>Last Name:</label>
+								<label for='last-name'>Store Location</label>
 								<input
 									type='text'
 									id='last-name'
@@ -144,64 +144,26 @@ export default class EditFarmer extends Component {
 									onChange={this.onChangelName}
 								/>
 							</div>
-							<div className='basic-details'>
-								<label for='dob'>Date of Birth:</label>
-								<input
-									type='date'
-									id='dob'
-									name='dob'
-									required
-									value={this.state.dob}
-									onChange={this.onChangedob}
-								/>
-							</div>
+							
 
 							<div className='basic-details'>
-								<label for='phone-number'>Phone Number:</label>
-								<input
-									type='tel'
-									id='phone-number'
-									name='phone_number'
-									required
-									value={this.state.pNumber}
-									onChange={this.onChangepNumber}
-								/>
-							</div>
-
-							<div className='basic-details'>
-								<label for='email'>Email:</label>
-								<input
-									type='email'
-									id='email'
-									name='email'
-									required
-									value={this.state.email}
-									onChange={this.onChangeemail}
-								/>
-							</div>
-
-							<div className='basic-details'>
-								<label for='username'>Username:</label>
+								<label for='username'>Username </label>
 								<input
 									type='text'
 									id='username'
 									name='username'
-									required
+									required 
 									value={this.state.uName}
 									onChange={this.onChangeuName}
 								/>
 							</div>
 
 							<div className='basic-details'>
-								<label for='password'>Password:</label>
-								<input
-									type='password'
-									id='password'
-									name='password'
-									required
-									value={this.state.password}
-									onChange={this.onChangepassword}
-								/>
+								<label for='customers'>Customers</label>
+							<select name="" id="">
+								<option value="Name1">Name1</option>
+								<option value="Name2">Name2</option>
+							</select>
 							</div>
 						</div>
 						<div className='right'>

@@ -16,6 +16,10 @@ import AddFarmer from "./Components/AddFarmer";
 import DeleteVendor from "./Components/DeleteVendor";
 import DeleteClients from "./Components/DeleteClients";
 import DeleteProducts from "./Components/DeleteProducts";
+import EditFarmer from "./Components/EditFarmer";
+import EditClients from "./Components/EditClients";
+import EditProducts from "./Components/EditProducts";
+import EditVendor from "./Components/EditVendor";
 
 function App() {
 	return (
@@ -32,6 +36,11 @@ function App() {
 						<Route path='/DeleteVendor' component={DeleteVendor} />
 						<Route path='/DeleteClients' component={DeleteClients} />
 						<Route path='/DeleteProducts' component={DeleteProducts} />
+						<Route path='/EditFarmer' component={EditFarmer} />
+						<Route path='/EditClients' component={EditClients} />
+						<Route path='/EditProducts' component={EditProducts} />
+						<Route path='/EditVendor' component={EditVendor} />
+
 						
 
 					</Switch>
