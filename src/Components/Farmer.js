@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/Farmer.css";
 import img1 from "../images/dashboard-img1.svg";
 import img2 from "../images/dashboard-img2.svg";
+import Header from './NavBar'
 
 export default function Farmer(props) {
 	const handleClick = props.handleClick;
@@ -25,6 +26,7 @@ export default function Farmer(props) {
 
 	return (
 		<div className='farmerPage'>
+			<Header />
 			<h2 className='main-header'>User Management</h2>
 			<button onClick={() => handleClick("addFarmer")}>
 				Add Farmer <i class='fa-solid fa-plus'></i>
