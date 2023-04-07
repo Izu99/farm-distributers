@@ -85,7 +85,7 @@ export default class AddVendor extends Component {
 
 		// if(this.state.cNumber.length > 4){
 
-		axios.post("http://localhost:4000/Vendor/add", obj).then((res) => {
+		axios.post("http://localhost:4000/vender/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				vName: "",

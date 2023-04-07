@@ -85,7 +85,7 @@ export default class AddClients extends Component {
 
 		// if(this.state.cNumber.length > 4){
 
-		axios.post("http://localhost:4000/Clients/add", obj).then((res) => {
+		axios.post("http://localhost:4000/client/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				vName: "",

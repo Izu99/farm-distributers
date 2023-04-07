@@ -7,61 +7,42 @@ import axios from "axios";
 export default class AddProducts extends Component {
 	constructor(props) {
 		super(props);
-		this.onChangevName = this.onChangevName.bind(this);
-		this.onChangelName = this.onChangelName.bind(this);
-		this.onChangedob = this.onChangedob.bind(this);
-		this.onChangepNumber = this.onChangepNumber.bind(this);
-		this.onChangeuName = this.onChangeuName.bind(this);
-		this.onChangepassword = this.onChangepassword.bind(this);
-		this.onChangeemail = this.onChangeemail.bind(this);
+		this.onChangepName = this.onChangepName.bind(this);
+		this.onChangesLocation = this.onChangesLocation.bind(this);
+		this.onChangepID = this.onChangepID.bind(this);
+		this.onChangecustomers = this.onChangecustomers.bind(this);
 		this.onChangeimage = this.onChangeimage.bind(this);
+		
 
 		this.onSubmit = this.onSubmit.bind(this);
 
 		this.state = {
-			vName: "",
-			lName: "",
-			dob: "",
-			pNumber: "",
-			uName: "",
-			password: "",
-			email: "",
+			pName: "",
+			sLocation: "",
+			pID: "",
+			customers: "",
 			image: "",
+			
 		};
 	}
-	onChangevName(e) {
+	onChangepName(e) {
 		this.setState({
-			vName: e.target.value,
+			pName: e.target.value,
 		});
 	}
-	onChangelName(e) {
+	onChangesLocation(e) {
 		this.setState({
-			lName: e.target.value,
+			sLocation: e.target.value,
 		});
 	}
-	onChangedob(e) {
+	onChangepID(e) {
 		this.setState({
-			dob: e.target.value,
+			pID: e.target.value,
 		});
 	}
-	onChangepNumber(e) {
+	onChangecustomers(e) {
 		this.setState({
-			pNumber: e.target.value,
-		});
-	}
-	onChangeuName(e) {
-		this.setState({
-			uName: e.target.value,
-		});
-	}
-	onChangepassword(e) {
-		this.setState({
-			password: e.target.value,
-		});
-	}
-	onChangeemail(e) {
-		this.setState({
-			email: e.target.value,
+			customers: e.target.value,
 		});
 	}
 	onChangeimage(e) {
@@ -69,34 +50,31 @@ export default class AddProducts extends Component {
 			image: e.target.value,
 		});
 	}
+	
 
 	onSubmit(e) {
 		e.preventDefault();
 		const obj = {
-			vName: this.state.vName,
-			lName: this.state.lName,
-			dob: this.state.dob,
-			pNumber: this.state.pNumber,
-			uName: this.state.uName,
-			password: this.state.password,
-			email: this.state.email,
+			pName: this.state.pName,
+			sLocation: this.state.sLocation,
+			pID: this.state.pID,
+			customers: this.state.customers,
 			image: this.state.image,
+			
+			
 		};
 
 		// if(this.state.cNumber.length > 4){
 
 		axios
-			.post("http://localhost:4000/Products AddProducts/add", obj)
+			.post("http://localhost:4000/product/add", obj)
 			.then((res) => {
 				alert("add Successfully");
 				this.setState({
-					vName: "",
-					lName: "",
-					dob: "",
-					pNumber: "",
-					uName: "",
-					password: "",
-					email: "",
+					pName: "",
+					sLocation: "",
+					pID: "",
+					customers: "",
 					image: "",
 				});
 				console.log(res.data);
@@ -105,10 +83,7 @@ export default class AddProducts extends Component {
 
 		window.location.replace("/");
 
-		// }
-		// else {
-		//     alert('Pleace enter more than 4 digit.');
-		// }
+		
 	}
 
 	render() {
@@ -130,8 +105,8 @@ export default class AddProducts extends Component {
 									id='first-name'
 									name='first_name'
 									required
-									value={this.state.vName}
-									onChange={this.onChangevName}
+									value={this.state.pName}
+									onChange={this.onChangepName}
 								/>
 							</div>
 
@@ -142,22 +117,12 @@ export default class AddProducts extends Component {
 									id='last-name'
 									name='last_name'
 									required
-									value={this.state.lName}
-									onChange={this.onChangelName}
+									value={this.state.sLocation}
+									onChange={this.onChangesLocation}
 								/>
 							</div>
 
-							<div className='basic-details'>
-								<label for='username'>Username:</label>
-								<input
-									type='text'
-									id='username'
-									name='username'
-									required
-									value={this.state.uName}
-									onChange={this.onChangeuName}
-								/>
-							</div>
+						
 
 							<div className='basic-details'>
 								<label for='productId'>Product Id:</label>
@@ -166,14 +131,14 @@ export default class AddProducts extends Component {
 									id='productId'
 									name='productId'
 									required
-									value={this.state.productId}
-									onChange={this.onChangepassword}
+									value={this.state.pID}
+									onChange={this.onChangepID}
 								/>
 							</div>
 
 							<div className='basic-details'>
 								<label for='customer'>Customer:</label>
-								<select name="" id="">
+								<select name="" id="" value={this.state.customers}	onChange={this.onChangecustomers}>
                                     <option value="Name1">Name1</option>
                                     <option value="Name2">Name2</option>
                                 </select>
