@@ -17,6 +17,7 @@ import AddVendor from './AddVendor'
 import AddProducts from "./AddProducts";
 import AddClients from "./AddClients";
 import ProfileFarmer from "./ProfileFarmer";
+import EditClients from './EditClients'
 
 const LeftSidebar = () => {
 	const [active, setActive] = useState("addVendor"); // Set the default active component to Dashboard
@@ -72,6 +73,7 @@ const LeftSidebar = () => {
 				{active === "addVendor" && <AddVendor />}        
 				{active === "addProducts" && <AddProducts />}
 				{active === "addClients" && <AddClients />}
+				{active === "editClients" && <EditClients />}
 			</div>
 		</div>
 	);
