@@ -3,26 +3,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-Product = new Schema({
+Inventory = new Schema({
     pName: {
         type: String
     },
-    sLocation: {
+    stock: {
         type: String
     },
-    pID: {
+    pCode: {
         type: String
     },
-    customers: {
+    cost: {
         type: String
     },
-    image: {
+    vender: {
         type: String
     }
 
  },
   {
-    collation: 'product'
+    collation: 'inventory'
 });
 
-module.exports = mongoose.model('Product',Product);
+module.exports = mongoose.model('Inventory',Inventory);

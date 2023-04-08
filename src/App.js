@@ -39,7 +39,7 @@ function App() {
 						<Route path='/EditFarmer' component={EditFarmer} />
 						<Route path='/EditClients' component={EditClients} />
 						<Route path='/EditProducts' component={EditProducts} />
-						<Route path='/EditVendor' component={EditVendor} />
+						<Redirect path='/EditVendor' component={EditVendor} />
 
 						
 

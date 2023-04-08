@@ -1,9 +1,11 @@
 .AddFarmer {
+	width: 100%;
+	background-color: #c5c9c915;
 }
 
 .AddFarmer form {
 	/* background-color: rgb(90, 159, 219); */
-	width: 75%;
+	/* width: 100%; */
 	height: auto;
 	margin-left: 10%;
 	margin-top: 5%;
