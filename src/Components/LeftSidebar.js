@@ -69,7 +69,7 @@ const LeftSidebar = () => {
 				{active === "vendor" && <Vendor handleClick={handleClick} />}
 				{active === "products" && <Products handleClick={handleClick} />}
 				{active === "clients" && <Clients handleClick={handleClick} />}
-				{active === "addFarmer" && <ProfileFarmer />}
+				{active === "addFarmer" && <AddFarmer />}
 				{active === "addVendor" && <AddVendor />}        
 				{active === "addProducts" && <AddProducts />}
 				{active === "addClients" && <AddClients />}
