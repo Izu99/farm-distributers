@@ -1,32 +1,37 @@
 .clientsPage {
 	text-align: left !important;
+	display: flex;
 }
 
-.clientsPage .main-header {
+.clientsPage .right-side .main-header {
 	margin: 5% 12% 0 12%;
 	font-size: 1.8rem;
 }
 
-.clientsPage button:nth-child(3) {
+
+
+.clientsPage a.addclients{
 	border: none;
 	background-color: #ffffff00;
-	margin-left: 60%;
-	font-size: 1.4rem;
-	width: 40%;
-	height: 100%;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
 	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
 }
 
-.clientsPage button i {
+.clientsPage a.addclients i {
 	margin-left: 15px;
 	border-radius: 50%;
 	background-color: #1d371c;
-	padding: 1.2%;
+	padding: 0.6%;
 	color: #ffffff;
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
-.clientsPage table {
+.clientsPage .right-side table {
 	margin-top: 5%;
 	width: 100%;
 	/* border-collapse: separate; */
@@ -34,20 +39,20 @@
 	margin-left: 2%;
 }
 
-.clientsPage table .users {
+.clientsPage .right-side table .users {
 	height: 76%;
 	border-width: 15px;
 	margin-left: 12%;
 }
 
-.clientsPage .users .user {
+.clientsPage .right-side .users .user {
 	border: 2px solid #a3a3a32f;
 	padding: 1%;
 	border-radius: 65px;
 	margin-bottom: 2%;
 }
 
-.clientsPage .users .user img {
+.clientsPage .right-side .users .user img {
 	width: 3rem;
 	height: 3rem;
 	border-radius: 50%;
@@ -55,19 +60,19 @@
 	padding: 0.6%;
 }
 
-.clientsPage .users .user .details {
+.clientsPage .right-side .users .user .details {
 	margin-left: 8%;
 	display: flex;
 	justify-content: space-between;
 }
 
-.clientsPage .users .user .details h2 {
+.clientsPage .right-side .users .user .details h2 {
 	font-size: 1.1rem;
 	color: #969696;
 	margin-top: -4.25%;
 }
 
-.clientsPage .users .user button {
+.clientsPage .right-side .users .user button {
 	display: block;
 	margin-top: -5%;
 	margin-right: 5%;
@@ -80,10 +85,10 @@
 	color: #ffffff;
 }
 
-.clientsPage .users .user button:hover {
+.clientsPage .right-side .users .user button:hover {
 	background-color: #122511;
 }
 /* 
-.clientsPage .users .user .details p {
+.clientsPage .right-side .users .user .details p {
     margin-top: -6%;
 }  */

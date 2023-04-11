@@ -1,4 +1,7 @@
 .farmerPage {
+	display: flex;
+}
+.farmerPage {
 	text-align: left !important;
 }
 
@@ -7,23 +10,25 @@
 	font-size: 1.8rem;
 }
 
-.farmerPage button {
+.farmerPage a.addfarmer{
 	border: none;
 	background-color: #ffffff00;
-	margin-left: 60%;
-	font-size: 1.4rem;
-	width: 40%;
-	height: 100%;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
 	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
 }
 
-.farmerPage button i {
+.farmerPage a.addfarmer i {
 	margin-left: 15px;
 	border-radius: 50%;
 	background-color: #1d371c;
-	padding: 1.2%;
+	padding: 0.6%;
 	color: #ffffff;
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
 .farmerPage table {

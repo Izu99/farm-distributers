@@ -1,4 +1,9 @@
+.AddProductsPage {
+	display: flex;
+}
+
 .AddProducts {
+	width: 100%;
 }
 
 .AddProducts form {

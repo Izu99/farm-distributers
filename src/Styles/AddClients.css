@@ -1,4 +1,8 @@
+.AddClientsPage {
+	display: flex;
+}
 .AddClients {
+	width: 100%;
 }
 
 .AddClients form {

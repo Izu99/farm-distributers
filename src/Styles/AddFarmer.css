@@ -1,3 +1,7 @@
+.AddFarmerPage {
+	display: flex;
+}
+
 .AddFarmer {
 	width: 100%;
 	background-color: #c5c9c915;

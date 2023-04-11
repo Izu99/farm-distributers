@@ -1,8 +1,19 @@
 import React from "react";
 import "../Styles/Clients.css";
-import img1 from "../images/dashboard-img1.svg";
-import img2 from "../images/dashboard-img2.svg";
+// import img1 from "../images/dashboard-img1.svg";
+// import img2 from "../images/dashboard-img2.svg";
 import Header from "./NavBar";
+
+import "../Styles/LeftSidebar.css";
+
+import img1 from "../images/dashboard-icon.svg";
+import img2 from "../images/farmer-icon.svg";
+import img3 from "../images/vender-icon.svg";
+import img4 from "../images/products-icon.svg";
+import img5 from "../images/clients-icon.svg";
+
+import logo from "../images/navbar-logo.svg";
+
 
 export default function Clients(props) {
 	const handleClick = props.handleClick;
@@ -26,11 +37,45 @@ export default function Clients(props) {
 
 	return (
 		<div className='clientsPage'>
+			<div className='left-sidebar'>
+				<img src={logo} alt='' className='header-logo' />
+				<a href='/dashboard'>
+					<div className='icon dashboard'>
+						<img src={img1} alt='icon1' />
+						<div className='text'>Dashboard</div>
+					</div>
+				</a>
+				<a href='/farmer'>
+					<div className='icon farmer'>
+						<img src={img2} alt='icon2' />
+						<div className='text'>Farmer</div>
+					</div>
+				</a>
+				<a href='/vendor'>
+					<div className='icon vendor'>
+						<img src={img3} alt='icon3' />
+						<div className='text'>Vendor</div>
+					</div>
+				</a>
+				<a href='/product'>
+					<div className='icon products'>
+						<img src={img4} alt='icon4' />
+						<div className='text'>Products</div>
+					</div>
+				</a>
+				<a href='/clients'>
+					<div className='icon clients'>
+						<img src={img5} alt='icon5' />
+						<div className='text'>Clients</div>
+					</div>
+				</a>
+			</div>
+			<div className="right-side">
 			<Header />
 			<h2 className='main-header'>Client Management</h2>
-			<button onClick={() => handleClick("addClients")}>
+			<a href="/addclients" className="addclients">
 				Add Clients <i class='fa-solid fa-plus'></i>
-			</button>
+				</a>
 			<table class='table table-striped'>
 				{" "}
 				<tr className='users'>
@@ -118,6 +163,7 @@ export default function Clients(props) {
 					</td>
 				</tr>
 			</table>
+			</div>
 		</div>
 	);
 }

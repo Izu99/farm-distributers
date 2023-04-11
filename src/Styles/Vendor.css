@@ -1,32 +1,37 @@
+
 .vendorPage {
+	display: flex;
+}
+.vendorPage .right-side {
 	text-align: left !important;
 }
 
-.vendorPage .main-header {
+.vendorPage .right-side .main-header {
 	margin: 5% 12%;
 	font-size: 1.8rem;
 }
 
-.vendorPage button {
+.vendorPage .right-side a.addvendor {
 	border: none;
 	background-color: #ffffff00;
-	margin-left: 60%;
-	font-size: 1.4rem;
-	width: 40%;
-	height: 100%;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
 	font-weight: 530;
+	color: #1d371c;
 }
 
-.vendorPage button i {
+.vendorPage .right-side a.addvendor i {
 	margin-left: 15px;
 	border-radius: 50%;
 	background-color: #1d371c;
-	padding: 1.2%;
+	padding: 0.6%;
 	color: #ffffff;
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
-.vendorPage table {
+.vendorPage .right-side table {
 	margin-top: 5%;
 	width: 100%;
 	border-collapse: separate;
@@ -34,19 +39,19 @@
     margin-left: 2%;
 }
 
-.vendorPage table .users {
+.vendorPage .right-side table .users {
 	/* height: 76%; */
 	/* border-width: 15px; */
 }
 
-.vendorPage .users .user {
+.vendorPage .right-side .users .user {
 	padding: 1%;
 	border-radius: 35px;
 	margin-bottom: 2%;
     
 }
 
-.vendorPage .users .user img {
+.vendorPage .right-side .users .user img {
 	width: 12rem;
 	height: 12rem;
     /* border: 2px solid #0000003d; */
@@ -56,11 +61,11 @@
 }
 
 
-.vendorPage .users .user .details {
+.vendorPage .right-side .users .user .details {
     margin-left: 14%;
 }
 
-.vendorPage .users .user .details h2 {
+.vendorPage .right-side .users .user .details h2 {
 	font-size: 1.4rem;
     
 }

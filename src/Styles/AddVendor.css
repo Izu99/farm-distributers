@@ -1,4 +1,8 @@
+.AddVendorPage {
+	display: flex;
+}
 .AddVendor {
+	width: 100%;
 }
 
 .AddVendor form {

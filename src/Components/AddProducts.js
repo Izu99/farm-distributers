@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import "../Styles/AddProducts.css";
-import img1 from "../images/drag-and-drop-image.svg";
+import draganddropimage from "../images/drag-and-drop-image.svg";
 import Header from "./NavBar";
 import axios from "axios";
+
+import "../Styles/LeftSidebar.css";
+
+import img1 from "../images/dashboard-icon.svg";
+import img2 from "../images/farmer-icon.svg";
+import img3 from "../images/vender-icon.svg";
+import img4 from "../images/products-icon.svg";
+import img5 from "../images/clients-icon.svg";
+
+import logo from "../images/navbar-logo.svg";
 
 export default class AddProducts extends Component {
 	constructor(props) {
@@ -89,6 +99,40 @@ export default class AddProducts extends Component {
 	render() {
 		return (
 			<div className='AddProductsPage'>
+				<div className='left-sidebar'>
+					<img src={logo} alt='' className='header-logo' />
+					<a href='/dashboard'>
+						<div className='icon dashboard'>
+							<img src={img1} alt='icon1' />
+							<div className='text'>Dashboard</div>
+						</div>
+					</a>
+					<a href='/farmer'>
+						<div className='icon farmer'>
+							<img src={img2} alt='icon2' />
+							<div className='text'>Farmer</div>
+						</div>
+					</a>
+					<a href='/vendor'>
+						<div className='icon vendor'>
+							<img src={img3} alt='icon3' />
+							<div className='text'>Vendor</div>
+						</div>
+					</a>
+					<a href='/product'>
+						<div className='icon products'>
+							<img src={img4} alt='icon4' />
+							<div className='text'>Products</div>
+						</div>
+					</a>
+					<a href='/clients'>
+						<div className='icon clients'>
+							<img src={img5} alt='icon5' />
+							<div className='text'>Clients</div>
+						</div>
+					</a>
+				</div>
+				<div className="right-side">
 				<Header />
 				<div className='AddProducts'>
 					<form
@@ -148,7 +192,7 @@ export default class AddProducts extends Component {
 							<div className='basic-details'>
 								<label htmlFor='fileInput'>
 									<p>Add Image</p>
-									<img src={img1} alt='imageicon' />
+									<img src={draganddropimage} alt='imageicon' />
 								</label>
 								<input
 									type='file'
@@ -161,6 +205,7 @@ export default class AddProducts extends Component {
 
 						<button type='submit'>Add Products</button>
 					</form>
+				</div>
 				</div>
 			</div>
 		);

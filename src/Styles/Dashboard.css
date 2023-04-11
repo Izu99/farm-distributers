@@ -1,8 +1,9 @@
 .DashboardPage {
+	display: flex;
 	width: 100%;
 }
 
-.DashboardPage img {
+.DashboardPage .right-side img {
 	margin-top: 6rem;
 	width: 85%;
 }

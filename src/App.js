@@ -20,6 +20,14 @@ import EditFarmer from "./Components/EditFarmer";
 import EditClients from "./Components/EditClients";
 import EditProducts from "./Components/EditProducts";
 import EditVendor from "./Components/EditVendor";
+import Dashboard from "./Components/Dashboard";
+import Farmer from "./Components/Farmer";
+import Vendor from "./Components/Vendor";
+import Products from "./Components/Products";
+import Clients from "./Components/Clients";
+import AddVendor from "./Components/AddVendor";
+import AddProducts from "./Components/AddProducts";
+import AddClients from "./Components/AddClients";
 
 function App() {
 	return (
@@ -39,10 +47,18 @@ function App() {
 						<Route path='/EditFarmer' component={EditFarmer} />
 						<Route path='/EditClients' component={EditClients} />
 						<Route path='/EditProducts' component={EditProducts} />
-						<Redirect path='/EditVendor' component={EditVendor} />
+						<Route path='EditVendor' component={EditVendor} />
+						<Route path='/dashboard' component={Dashboard} />
+						<Route path='/farmer' component={Farmer} />
+						<Route path='/vendor' component={Vendor} />
+						<Route path='/product' component={Products} />
+						<Route path='/clients' component={Clients} />
+						<Route path='/addfarmer' component={AddFarmer} />
+						<Route path='/addvendor' component={AddVendor} />
+						<Route path='/addproducts' component={AddProducts} />
+						<Route path='/addclients' component={AddClients} />
 
-						
-
+						<Redirect path='/404' component={Login} />
 					</Switch>
 				</Router>
 			</div>

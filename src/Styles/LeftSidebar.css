@@ -1,56 +1,60 @@
-.Page {
-	display: flex;
-}
-
-.Page .left-sidebar {
-	width: 15%;
+.left-sidebar {
+	width: 12%;
 	height: auto;
 	background-color: #ffffff;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0px 0px 10px 0px #cccccc;
+	position: relative;
+	height: 100%;
+	/* background-color: #1d371c; */
 }
 
-.Page .left-sidebar .header-logo {
-	width: 48%;
-	margin: -26%;
-	background-color: #ffffff;
-	padding: 28% 52% 20% 52%;
+.left-sidebar .header-logo {
+	width: 40%;
+	margin-left: 30%;
 }
 
-.Page .left-sidebar .icon {
+.left-sidebar .icon {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	padding: 1.5rem;
+	/* background-color: #000000; */
+	z-index: -1;
+	
 }
 
-.Page .left-sidebar .icon:nth-child(2) {
-	margin-top: 26%;
-	/* background-color: #1d371c; */
-}
-
-.Page .left-sidebar .icon img {
+.left-sidebar .icon img {
 	width: 2.5rem;
 	height: auto;
 	margin-bottom: 0.5rem;
+	/* background-color: #1d371c; */
+	margin-top: 1rem;
 }
 
-.Page .left-sidebar .icon:hover {
-	background-color: #d9d9d9;
+/* .left-sidebar .icon img */
+
+.left-sidebar .icon:hover {
+	/* background-color: #d9d9d9; */
 }
 
-.Page .left-sidebar .icon p {
+.left-sidebar .icon p {
 	margin: 0;
 	font-size: 1.2rem;
 	color: #1d371c;
 	font-weight: 500;
 }
 
-.Page .right-side {
-	width: 85%;
-	/* background-color: #1d371c; */
+.right-side {
+	width: 88%;
+	height: 100%;
+}
+
+.left-sidebar a {
+	text-decoration: none;
+	color: #000000;
 }

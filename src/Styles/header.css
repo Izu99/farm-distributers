@@ -6,6 +6,7 @@
     height: 5.5rem;
     padding: 0 4% 0 0;
     width: auto;
+    z-index: 99;
   }
 
   .header p {

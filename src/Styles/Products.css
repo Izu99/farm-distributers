@@ -1,13 +1,18 @@
 .productsPage {
+	display: flex;
+}
+.productsPage .right-side {
 	text-align: left !important;
+	position: relative;
 }
 
-.productsPage .main-header {
+
+.productsPage .right-side .main-header {
 	margin: 5% 12%;
 	font-size: 1.8rem;
 }
-
-.productsPage button {
+/* 
+.productsPage .right-side button {
 	border: none;
 	background-color: #ffffff00;
 	margin-left: 60%;
@@ -17,16 +22,38 @@
 	font-weight: 530;
 }
 
-.productsPage button i {
+.productsPage .right-side button i {
 	margin-left: 15px;
 	border-radius: 50%;
 	background-color: #1d371c;
 	padding: 1.2%;
 	color: #ffffff;
 	font-size: 1rem;
+} */
+
+
+.productsPage a.addproducts{
+	border: none;
+	background-color: #ffffff00;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
+	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
 }
 
-.productsPage table {
+.productsPage a.addproducts i {
+	margin-left: 15px;
+	border-radius: 50%;
+	background-color: #1d371c;
+	padding: 0.6%;
+	color: #ffffff;
+	font-size: 0.8rem;
+}
+
+.productsPage .right-side table {
 	margin-top: 5%;
 	width: 100%;
 	border-collapse: separate;
@@ -34,19 +61,19 @@
     /* margin-left: 2%; */
 }
 
-.productsPage table .users {
+.productsPage .right-side table .users {
 	/* height: 76%; */
 	/* border-width: 15px; */
 }
 
-.productsPage .users .user {
+.productsPage .right-side .users .user {
 	padding: 1%;
 	border-radius: 35px;
 	margin-bottom: 2%;
     
 }
 
-.productsPage .users .user img {
+.productsPage .right-side .users .user img {
 	width: 12rem;
 	height: 12rem;
     /* border: 2px solid #0000003d; */
@@ -56,11 +83,11 @@
 }
 
 
-.productsPage .users .user .details {
+.productsPage .right-side .users .user .details {
     margin-left: 14%;
 }
 
-.productsPage .users .user .details h2 {
+.productsPage .right-side .users .user .details h2 {
 	font-size: 1.4rem;
     
 }
