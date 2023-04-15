@@ -1,33 +1,29 @@
 .ProfileProducts {
 	text-align: left;
+	display: flex;
+	width: 100%;
+	
 }
 
-.ProfileProducts form {
-	/* background-color: rgb(90, 159, 219); */
-	width: 75%;
-	height: auto;
-	margin-left: 10%;
-	margin-top: 5%;
+
+.ProfileProducts .top img {
+	margin-left: 43%;
+	width: 15%;
 }
 
-.ProfileProducts form .top img {
-	margin-left: 38%;
-	width: 25%;
-}
-
-.ProfileProducts form .top h2 {
+.ProfileProducts .top h2 {
 	text-align: center;
 	font-size: 2.4rem;
 	color: #1d371c;
 	margin: 0;
 }
 
-.ProfileProducts form .top p {
+.ProfileProducts .top p {
 	text-align: center;
 	margin-bottom: 15px;
 }
 
-.ProfileProducts form .bottom .basic-details {
+.ProfileProducts .bottom .basic-details {
 	/* align-items: center; */
 	justify-content: left;
 	font-size: 1.2rem;
@@ -37,13 +33,13 @@
 	padding: 0.6rem;
 }
 
-.ProfileProducts form .bottom .basic-details label {
+.ProfileProducts .bottom .basic-details label {
 	text-align: center;
 	margin-bottom: 1%;
 	margin-left: 15%;
 }
 
-.ProfileProducts form .bottom .basic-details input {
+.ProfileProducts .bottom .basic-details input {
 	position: absolute;
 	left: 35rem;
 	width: 37%;
@@ -54,11 +50,11 @@
 }
 
 
-.ProfileProducts form .bottom .basic-details input {
+.ProfileProducts .bottom .basic-details input {
 	/* opacity: 0; */
 }
 
-.ProfileProducts form button[type=submit] {
+.ProfileProducts button[type=submit] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
@@ -72,6 +68,6 @@
 	margin-left: 10rem;
 }
 
-.ProfileProducts form button[type=submit]:hover {
+.ProfileProducts button[type=submit]:hover {
 	background-color: #132912;
 }

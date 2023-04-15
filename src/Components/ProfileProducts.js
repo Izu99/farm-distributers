@@ -4,6 +4,16 @@ import profileImg from "../images/profile-img.png";
 import DeleteConfirmation from "./DeleteConfirmation";
 import Header from "./NavBar";
 
+import "../Styles/LeftSidebar.css";
+
+import logo from "../images/navbar-logo.svg";
+
+import img1 from "../images/dashboard-icon.svg";
+import img2 from "../images/farmer-icon.svg";
+import img3 from "../images/vender-icon.svg";
+import img4 from "../images/products-icon.svg";
+import img5 from "../images/clients-icon.svg";
+
 function ProfileProducts() {
 	const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
@@ -22,43 +32,104 @@ function ProfileProducts() {
 
 	return (
 		<div className='ProfileProducts'>
-			<Header />
-			<form action=''>
-				<div className='top'>
-					<img src={profileImg} alt='' />
-					<h2>Name</h2>
-					<p>Products</p>
-				</div>
-				<div className='bottom'>
-					<div className='basic-details'>
-						<label htmlFor=''>Product Name</label>
-						<input type='text' required />
+			<div className='left-sidebar'>
+				<img src={logo} alt='' className='header-logo' />
+				<a href='/dashboard'>
+					<div className='icon dashboard'>
+						<img src={img1} alt='icon1' />
+						<div className='text'>Dashboard</div>
 					</div>
-					<div className='basic-details'>
-						<label htmlFor=''>Current Stock</label>
-						<input type='text' required />
+				</a>
+				<a href='/farmer'>
+					<div className='icon farmer'>
+						<img src={img2} alt='icon2' />
+						<div className='text'>Farmer</div>
 					</div>
-					<div className='basic-details'>
-						<label htmlFor=''>Store Location</label>
-						<input type='text' required />
+				</a>
+				<a href='/vendor'>
+					<div className='icon vendor'>
+						<img src={img3} alt='icon3' />
+						<div className='text'>Vendor</div>
 					</div>
-
-					<div className='basic-details'>
-						<label htmlFor=''>Customers</label>
-						<input type='text' required />
+				</a>
+				<a href='/product'>
+					<div className='icon products'>
+						<img src={img4} alt='icon4' />
+						<div className='text'>Products</div>
 					</div>
-				</div>
-				<button type='submit'>Edit Product</button>
-				<button type='submit' onClick={handleDeleteClick}>
-					Delete Product
-				</button>
-				{showDeleteConfirmation && (
-					<DeleteConfirmation
-						onCancel={handleCancelDelete}
-						onConfirm={handleConfirmDelete}
-					/>
-				)}
-			</form>
+				</a>
+				<a href='/clients'>
+					<div className='icon clients'>
+						<img src={img5} alt='icon5' />
+						<div className='text'>Clients</div>
+					</div>
+				</a>
+			</div>
+			<div className='right-side'>
+				<Header />
+				<table>
+					<div className='top'>
+						<tr>
+							<td>
+								<img src={profileImg} alt='' />
+								<h2>Name</h2>
+								<p>Products</p>
+							</td>
+						</tr>
+					</div>
+					<div className='bottom'>
+						<tr>
+							<td>
+								<div className='basic-details'>
+									<label htmlFor=''>Product Name</label>
+									<input type='text' required />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div className='basic-details'>
+									<label htmlFor=''>Current Stock</label>
+									<input type='text' required />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div className='basic-details'>
+									<label htmlFor=''>Store Location</label>
+									<input type='text' required />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div className='basic-details'>
+									<label htmlFor=''>Customers</label>
+									<input type='text' required />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type='submit'>Edit Product</button>
+							</td>
+					
+							<td>
+								<button type='submit' onClick={handleDeleteClick}>
+									Delete Product
+								</button>
+							</td>
+						</tr>
+						{showDeleteConfirmation && (
+							<DeleteConfirmation
+								onCancel={handleCancelDelete}
+								onConfirm={handleConfirmDelete}
+							/>
+						)}
+					</div>
+				</table>
+			</div>
 		</div>
 	);
 }

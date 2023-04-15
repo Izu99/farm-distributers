@@ -1,49 +1,54 @@
 .ProfileFarmer {
 	text-align: left;
+	width: 100%;
+	display: flex;
 }
 
-.ProfileFarmer form {
-	/* background-color: rgb(90, 159, 219); */
-	width: 75%;
-	height: auto;
-	margin-left: 10%;
-	margin-top: 5%;
+.ProfileFarmer .top {
+	/* margin-left: 70%; */
 }
 
-.ProfileFarmer form .top img {
-	margin-left: 38%;
-	width: 25%;
+.ProfileFarmer .top img {
+	margin-left: 43%;
+	width: 15%;
+	/* display: none; */
 }
 
-.ProfileFarmer form .top h2 {
+.ProfileFarmer .top h2 {
 	text-align: center;
 	font-size: 2.4rem;
 	color: #1d371c;
 	margin: 0;
 }
 
-.ProfileFarmer form .top p {
+.ProfileFarmer .top p {
 	text-align: center;
 	margin-bottom: 15px;
 }
 
-.ProfileFarmer form .bottom .basic-details {
+.ProfileFarmer .bottom .basic-details {
 	/* align-items: center; */
-	justify-content: left;
+	/* justify-content: left; */
 	font-size: 1.2rem;
 	margin-top: 2%;
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
 	padding: 0.6rem;
+	width: 110%;
 }
 
-.ProfileFarmer form .bottom .basic-details label {
+.ProfileFarmer .bottom .basic-details td {
+	width: 100%;
+}
+
+.ProfileFarmer .bottom .basic-details label {
 	text-align: center;
 	margin-bottom: 1%;
 	margin-left: 15%;
+	width: auto;
 }
 
-.ProfileFarmer form .bottom .basic-details input {
+.ProfileFarmer .bottom .basic-details input {
 	position: absolute;
 	left: 35rem;
 	width: 37%;
@@ -53,12 +58,7 @@
 	padding-left: 1%;
 }
 
-
-.ProfileFarmer form .bottom .basic-details input {
-	/* opacity: 0; */
-}
-
-.ProfileFarmer form button[type=submit] {
+.ProfileFarmer .bottom button[type="submit"] {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1d371c;
@@ -72,6 +72,6 @@
 	margin-left: 10rem;
 }
 
-.ProfileFarmer form button[type=submit]:hover {
+.ProfileFarmer .bottom button[type="submit"]:hover {
 	background-color: #132912;
 }
