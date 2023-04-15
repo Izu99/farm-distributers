@@ -39,14 +39,20 @@
 /* .left-sidebar .icon img */
 
 .left-sidebar .icon:hover {
-	/* background-color: #d9d9d9; */
+	background-color: #d9d9d9;
 }
+
 
 .left-sidebar .icon p {
 	margin: 0;
 	font-size: 1.2rem;
 	color: #1d371c;
 	font-weight: 500;
+}
+
+
+.left-sidebar a:hover {
+	color: #1d371c;
 }
 
 .right-side {
