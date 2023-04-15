@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import "../Styles/EditVendor.css";
-import img1 from "../images/drag-and-drop-image.svg";
-// import Header from "./NavBar";
+import draganddropimage from "../images/drag-and-drop-image.svg";
+import Header from "./NavBar";
 import axios from "axios";
+
+import "../Styles/LeftSidebar.css";
+
+import img1 from "../images/dashboard-icon.svg";
+import img2 from "../images/farmer-icon.svg";
+import img3 from "../images/vender-icon.svg";
+import img4 from "../images/products-icon.svg";
+import img5 from "../images/clients-icon.svg";
+
+import logo from "../images/navbar-logo.svg";
 
 export default class EditVendor extends Component {
 	constructor(props) {
@@ -112,15 +122,49 @@ export default class EditVendor extends Component {
 	render() {
 		return (
 			<div className='EditVendorPage'>
-				{/* <Header /> */}
+				<div className='left-sidebar'>
+					<img src={logo} alt='' className='header-logo' />
+					<a href='/dashboard'>
+						<div className='icon dashboard'>
+							<img src={img1} alt='icon1' />
+							<div className='text'>Dashboard</div>
+						</div>
+					</a>
+					<a href='/farmer'>
+						<div className='icon farmer'>
+							<img src={img2} alt='icon2' />
+							<div className='text'>Farmer</div>
+						</div>
+					</a>
+					<a href='/vendor'>
+						<div className='icon vendor'>
+							<img src={img3} alt='icon3' />
+							<div className='text'>Vendor</div>
+						</div>
+					</a>
+					<a href='/product'>
+						<div className='icon products'>
+							<img src={img4} alt='icon4' />
+							<div className='text'>Products</div>
+						</div>
+					</a>
+					<a href='/clients'>
+						<div className='icon clients'>
+							<img src={img5} alt='icon5' />
+							<div className='text'>Clients</div>
+						</div>
+					</a>
+				</div>
+				<div className="right-side">
+
+				
+				<Header />
 				<div className='EditVendor'>
-					<form
-						onSubmit={this.onSubmit}
-						action='submit-farmer.php'
-						method='post'
-						enctype='multipart/form-data'>
-						<h2>Edit Vendor</h2>
-						<div className='left'>
+					<table>
+
+											<h2>Edit Vendor</h2>
+						<tr className='left'>
+							<td>
 							<div className='basic-details'>
 								<label for='first-name'>First Name:</label>
 								<input
@@ -132,6 +176,10 @@ export default class EditVendor extends Component {
 									onChange={this.onChangevName}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
 
 							<div className='basic-details'>
 								<label for='last-name'>Last Name:</label>
@@ -144,6 +192,10 @@ export default class EditVendor extends Component {
 									onChange={this.onChangelName}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
 							<div className='basic-details'>
 								<label for='dob'>Date of Birth:</label>
 								<input
@@ -155,6 +207,11 @@ export default class EditVendor extends Component {
 									onChange={this.onChangedob}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
+							
 
 							<div className='basic-details'>
 								<label for='phone-number'>Phone Number:</label>
@@ -167,6 +224,11 @@ export default class EditVendor extends Component {
 									onChange={this.onChangepNumber}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
+	
 
 							<div className='basic-details'>
 								<label for='email'>Email:</label>
@@ -179,6 +241,10 @@ export default class EditVendor extends Component {
 									onChange={this.onChangeemail}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
 
 							<div className='basic-details'>
 								<label for='username'>Username:</label>
@@ -191,6 +257,10 @@ export default class EditVendor extends Component {
 									onChange={this.onChangeuName}
 								/>
 							</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
 
 							<div className='basic-details'>
 								<label for='password'>Password:</label>
@@ -203,12 +273,15 @@ export default class EditVendor extends Component {
 									onChange={this.onChangepassword}
 								/>
 							</div>
-						</div>
+							</td>
+							</tr>
+							<tr>
+								<td>
 						<div className='right'>
 							<div className='basic-details'>
 								<label htmlFor='fileInput'>
 									<p>Add Image</p>
-									<img src={img1} alt='imageicon' />
+									<img src={draganddropimage} alt='imageicon' />
 								</label>
 								<input
 									type='file'
@@ -218,10 +291,17 @@ export default class EditVendor extends Component {
 								/>
 							</div>
 						</div>
+						</td>
+						</tr>
+						<tr>
+							<td>
 
 						<button type='submit'>Save</button>
-					</form>
-				</div>
+					</td>
+					</tr>
+					</table>
+					</div>
+					</div>
 			</div>
 		);
 	}

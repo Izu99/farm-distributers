@@ -1,7 +1,11 @@
+.EditVendorPage {
+	display: flex;
+}
 .EditVendor {
+	width: 100%;
 }
 
-.EditVendor form {
+.EditVendor {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -9,12 +13,12 @@
 	margin-top: 5%;
 }
 
-.EditVendor form h2 {
+.EditVendor h2 {
 	text-align: center;
 	font-size: 2.4rem;
 }
 
-.EditVendor form .basic-details {
+.EditVendor .basic-details {
 	display: flex;
 	flex-direction: column;
 	/* align-items: center; */
@@ -25,12 +29,12 @@
 	font-style: normal;
 }
 
-.EditVendor form .basic-details label {
+.EditVendor .basic-details label {
 	text-align: left;
 	margin-bottom: 1%;
 }
 
-.EditVendor form .basic-details input {
+.EditVendor .basic-details input {
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
@@ -38,21 +42,21 @@
 	padding-left: 1%;
 }
 
-.EditVendor form .right {
+.EditVendor .right {
 	position: absolute;
 	right: 15%;
-	top: 260px;
+	top: 35%;
 }
 
-.EditVendor form .right img {
+.EditVendor .right img {
 	width: 75%;
 }
 
-.EditVendor form .right .basic-details input {
+.EditVendor .right .basic-details input {
 	opacity: 0;
 }
 
-.EditVendor form button {
+.EditVendor button {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1D371C;

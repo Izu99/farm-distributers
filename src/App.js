@@ -47,7 +47,7 @@ function App() {
 						<Route path='/EditFarmer' component={EditFarmer} />
 						<Route path='/EditClients' component={EditClients} />
 						<Route path='/EditProducts' component={EditProducts} />
-						<Route path='EditVendor' component={EditVendor} />
+						<Route path='/EditVendor' component={EditVendor} />
 						<Route path='/dashboard' component={Dashboard} />
 						<Route path='/farmer' component={Farmer} />
 						<Route path='/vendor' component={Vendor} />

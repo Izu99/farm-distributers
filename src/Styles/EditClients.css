@@ -1,7 +1,11 @@
+.EditClientsPage {
+	display: flex;
+}
 .EditClients {
+	width: 100%;
 }
 
-.EditClients form {
+.EditClients {
 	/* background-color: rgb(90, 159, 219); */
 	width: 75%;
 	height: auto;
@@ -9,12 +13,13 @@
 	margin-top: 5%;
 }
 
-.EditClients form h2 {
+.EditClients h2 {
 	text-align: center;
 	font-size: 2.4rem;
 }
 
-.EditClients form .basic-details {
+
+.EditClients .basic-details {
 	display: flex;
 	flex-direction: column;
 	/* align-items: center; */
@@ -25,12 +30,13 @@
 	font-style: normal;
 }
 
-.EditClients form .basic-details label {
+
+.EditClients .basic-details label {
 	text-align: left;
 	margin-bottom: 1%;
 }
 
-.EditClients form .basic-details input {
+.EditClients .basic-details input {
 	width: 37%;
 	height: 2.1rem;
 	border: 1px solid rgba(0, 0, 0, 0.219);
@@ -38,21 +44,21 @@
 	padding-left: 1%;
 }
 
-.EditClients form .right {
+.EditClients .right {
 	position: absolute;
 	right: 15%;
 	top: 260px;
 }
 
-.EditClients form .right img {
+.EditClients .right img {
 	width: 75%;
 }
 
-.EditClients form .right .basic-details input {
+.EditClients .right .basic-details input {
 	opacity: 0;
 }
 
-.EditClients form button {
+.EditClients button {
 	margin-top: 5%;
 	margin-bottom: 10%;
 	background-color: #1D371C;
