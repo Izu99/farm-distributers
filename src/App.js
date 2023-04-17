@@ -28,6 +28,11 @@ import Clients from "./Components/Clients";
 import AddVendor from "./Components/AddVendor";
 import AddProducts from "./Components/AddProducts";
 import AddClients from "./Components/AddClients";
+import AdminClientViewTable from "./Components/AdminClientViewTable";
+import AdminFarmerViewTable from "./Components/AdminFarmerViewTable";
+import AdminProductsViewTable from "./Components/AdminProductsViewTable";
+import AdminVendorViewTable from "./Components/AdminVendorViewTable";
+
 
 function App() {
 	return (
@@ -44,10 +49,10 @@ function App() {
 						<Route path='/ProfileVendor' component={ProfileVendor} />
 						<Route path='/ProfileClients' component={ProfileClients} />
 						<Route path='/ProfileProducts' component={ProfileProducts} />
-						<Route path='/EditFarmer' component={EditFarmer} />
-						<Route path='/EditClients' component={EditClients} />
-						<Route path='/EditProducts' component={EditProducts} />
-						<Route path='/EditVendor' component={EditVendor} />
+						<Route path='/EditFarmer/:id' component={EditFarmer} />
+						<Route path='/EditClients/:id' component={EditClients} />
+						<Route path='/EditProducts/:id' component={EditProducts} />
+						<Route path='/EditVendor/:id' component={EditVendor} />
 						<Route path='/dashboard' component={Dashboard} />
 						<Route path='/farmer' component={Farmer} />
 						<Route path='/vendor' component={Vendor} />
@@ -57,6 +62,10 @@ function App() {
 						<Route path='/addvendor' component={AddVendor} />
 						<Route path='/addproducts' component={AddProducts} />
 						<Route path='/addclients' component={AddClients} />
+						<Route path='/AdminClientViewTable' component={AdminClientViewTable} />
+						<Route path='/AdminFarmerViewTable' component={AdminFarmerViewTable} />
+						<Route path='/AdminProductsViewTable' component={AdminProductsViewTable} />
+						<Route path='/AdminVendorViewTable' component={AdminVendorViewTable} />
 
 						<Redirect path='/404' component={Login} />
 					</Switch>

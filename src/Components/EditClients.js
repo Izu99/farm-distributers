@@ -37,6 +37,29 @@ export default class EditClients extends Component {
 			image: "",
 		};
 	}
+
+
+	componentDidMount() {
+        // alert('edit id ' +this.props.match.params.id);
+        axios.get('http://localhost:4000/client/edit/'+this.props.match.params.id)
+            .then(res => {
+                this.setState({
+                    vName: res.data.vName,
+                    lName: res.data.lName,
+                    dob: res.data.dob,
+                    pNumber: res.data.pNumber,
+					email: res.data.email,
+					uName: res.data.uName,
+					password: res.data.password,
+					image: res.data.image,
+                   
+                });
+            })
+            .catch(function (error){
+                console.log("Can't Get Data");
+            })
+    }
+
 	onChangevName(e) {
 		this.setState({
 			vName: e.target.value,
@@ -91,10 +114,10 @@ export default class EditClients extends Component {
 			image: this.state.image,
 		};
 
-		// if(this.state.cNumber.length > 4){
-
-		axios.post("http://localhost:4000/farmer/add", obj).then((res) => {
-			alert("add Successfully");
+		
+		axios.post('http://localhost:4000/client/update/'+this.props.match.params.id,obj)
+		.then((res) => {
+			alert(" Update Successfully");
 			this.setState({
 				vName: "",
 				lName: "",
@@ -104,17 +127,16 @@ export default class EditClients extends Component {
 				password: "",
 				email: "",
 				image: "",
+				
 			});
+		
 			console.log(res.data);
 		});
-		this.props.history.push("/");
+		this.props.history.push("/AdminClientViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminClientViewTable");
 
-		// }
-		// else {
-		//     alert('Pleace enter more than 4 digit.');
-		// }
+		
 	}
 
 	render() {

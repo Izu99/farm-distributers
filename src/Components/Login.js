@@ -40,11 +40,26 @@ export default  class Login extends  Component{
 	
 		if ((this.state.email === "admin@gmail.com") && (this.state.password === "admin123")) {
 		   //  const Station = "Hotel";
-			 this.props.history.push('/Login/'+Email);
+			 this.props.history.push('/AddFarmer/'+Email);
 	
 		}
-		else {
+		else  {
 			axios.post('http://localhost:4000/farmer/login',object)
+				.then(res => {
+					if(res.data.message === "Successful Login"){
+						// alert(res.data.message)
+						// alert(Email)
+						this.props.history.push('/AddFarmer/'+Email);
+					  // this.props.history.push('/');
+					}
+					else{
+						// alert(res.data.message)
+						this.props.history.push('/login');
+					}
+	
+				});
+
+				axios.post('http://localhost:4000/vender/login',object)
 				.then(res => {
 					if(res.data.message === "Successful Login"){
 						// alert(res.data.message)
@@ -58,7 +73,43 @@ export default  class Login extends  Component{
 					}
 	
 				});
+
+
+				axios.post('http://localhost:4000/client/login',object)
+				.then(res => {
+					if(res.data.message === "Successful Login"){
+						// alert(res.data.message)
+						// alert(Email)
+						this.props.history.push('/Login/'+Email);
+					  // this.props.history.push('/');
+					}
+					else{
+						// alert(res.data.message)
+						this.props.history.push('/login');
+					}
+	
+				});
+
+				axios.post('http://localhost:4000/product/login',object)
+				.then(res => {
+					if(res.data.message === "Successful Login"){
+						// alert(res.data.message)
+						// alert(Email)
+						this.props.history.push('/Login/'+Email);
+					  // this.props.history.push('/');
+					}
+					else{
+						// alert(res.data.message)
+						this.props.history.push('/login');
+					}
+	
+				});
+
+
 		}
+
+	
+		
 		
 	
 	}
@@ -73,12 +124,12 @@ export default  class Login extends  Component{
 				<p>Distributers</p>
 			</div>
 			<div className='rightSide'>
-			<form action="" >
+			<form onSubmit={this.onSubmit} >
       <h2>Login</h2>
           <p>User Name</p>
-          <input type="text" />
+          <input type="text" required value={this.state.email} onChange = {this.onChangeEmail}/>
           <p>Password</p>
-          <input type="password" />
+          <input type="password" required value={this.state.password} onChange = {this.onChangePassword} />
           <br />
           <button type="submit">Sign in</button>
       </form>

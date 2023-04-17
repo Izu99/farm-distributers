@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import "../Styles/EditVendor.css";
-import draganddropimage from "../images/drag-and-drop-image.svg";
+import "../Styles/EditClients.css";
+import draganddroiimage from "../images/drag-and-drop-image.svg";
 import Header from "./NavBar";
 import axios from "axios";
-
-import "../Styles/LeftSidebar.css";
 
 import img1 from "../images/dashboard-icon.svg";
 import img2 from "../images/farmer-icon.svg";
@@ -39,6 +37,29 @@ export default class EditVendor extends Component {
 			image: "",
 		};
 	}
+
+
+	componentDidMount() {
+        // alert('edit id ' +this.props.match.params.id);
+        axios.get('http://localhost:4000/vender/edit/'+this.props.match.params.id)
+            .then(res => {
+                this.setState({
+                    vName: res.data.vName,
+                    lName: res.data.lName,
+                    dob: res.data.dob,
+                    pNumber: res.data.pNumber,
+					email: res.data.email,
+					uName: res.data.uName,
+					password: res.data.password,
+					image: res.data.image,
+                   
+                });
+            })
+            .catch(function (error){
+                console.log("Can't Get Data");
+            })
+    }
+
 	onChangevName(e) {
 		this.setState({
 			vName: e.target.value,
@@ -93,10 +114,10 @@ export default class EditVendor extends Component {
 			image: this.state.image,
 		};
 
-		// if(this.state.cNumber.length > 4){
-
-		axios.post("http://localhost:4000/farmer/add", obj).then((res) => {
-			alert("add Successfully");
+		
+		axios.post('http://localhost:4000/vender/update/'+this.props.match.params.id,obj)
+		.then((res) => {
+			alert(" Update Successfully");
 			this.setState({
 				vName: "",
 				lName: "",
@@ -106,22 +127,21 @@ export default class EditVendor extends Component {
 				password: "",
 				email: "",
 				image: "",
+				
 			});
+		
 			console.log(res.data);
 		});
-		this.props.history.push("/");
+		this.props.history.push("/AdminVendorViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminVendorViewTable");
 
-		// }
-		// else {
-		//     alert('Pleace enter more than 4 digit.');
-		// }
+		
 	}
 
 	render() {
 		return (
-			<div className='EditVendorPage'>
+			<div className='EditClientsPage'>
 				<div className='left-sidebar'>
 					<img src={logo} alt='' className='header-logo' />
 					<a href='/dashboard'>
@@ -155,153 +175,115 @@ export default class EditVendor extends Component {
 						</div>
 					</a>
 				</div>
-				<div className="right-side">
+				<div className='right-side'>
+					<Header />
+					<div className='EditClients'>
 
-				
-				<Header />
-				<div className='EditVendor'>
-					<table>
+						<table>
+							<h2>Edit Clients</h2>
+							<div className='left'>
+								<div className='basic-details'>
+									<label for='first-name'>First Name:</label>
+									<input
+										type='text'
+										id='first-name'
+										name='first_name'
+										required
+										value={this.state.vName}
+										onChange={this.onChangevName}
+									/>
+								</div>
 
-											<h2>Edit Vendor</h2>
-						<tr className='left'>
-							<td>
-							<div className='basic-details'>
-								<label for='first-name'>First Name:</label>
-								<input
-									type='text'
-									id='first-name'
-									name='first_name'
-									required
-									value={this.state.vName}
-									onChange={this.onChangevName}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
+								<div className='basic-details'>
+									<label for='last-name'>Last Name:</label>
+									<input
+										type='text'
+										id='last-name'
+										name='last_name'
+										required
+										value={this.state.lName}
+										onChange={this.onChangelName}
+									/>
+								</div>
+								<div className='basic-details'>
+									<label for='dob'>Date of Birth:</label>
+									<input
+										type='date'
+										id='dob'
+										name='dob'
+										required
+										value={this.state.dob}
+										onChange={this.onChangedob}
+									/>
+								</div>
 
-							<div className='basic-details'>
-								<label for='last-name'>Last Name:</label>
-								<input
-									type='text'
-									id='last-name'
-									name='last_name'
-									required
-									value={this.state.lName}
-									onChange={this.onChangelName}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
-							<div className='basic-details'>
-								<label for='dob'>Date of Birth:</label>
-								<input
-									type='date'
-									id='dob'
-									name='dob'
-									required
-									value={this.state.dob}
-									onChange={this.onChangedob}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
-							
+								<div className='basic-details'>
+									<label for='phone-number'>Phone Number:</label>
+									<input
+										type='tel'
+										id='phone-number'
+										name='phone_number'
+										required
+										value={this.state.pNumber}
+										onChange={this.onChangepNumber}
+									/>
+								</div>
 
-							<div className='basic-details'>
-								<label for='phone-number'>Phone Number:</label>
-								<input
-									type='tel'
-									id='phone-number'
-									name='phone_number'
-									required
-									value={this.state.pNumber}
-									onChange={this.onChangepNumber}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
-	
+								<div className='basic-details'>
+									<label for='email'>Email:</label>
+									<input
+										type='email'
+										id='email'
+										name='email'
+										required
+										value={this.state.email}
+										onChange={this.onChangeemail}
+									/>
+								</div>
 
-							<div className='basic-details'>
-								<label for='email'>Email:</label>
-								<input
-									type='email'
-									id='email'
-									name='email'
-									required
-									value={this.state.email}
-									onChange={this.onChangeemail}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
+								<div className='basic-details'>
+									<label for='username'>Username:</label>
+									<input
+										type='text'
+										id='username'
+										name='username'
+										required
+										value={this.state.uName}
+										onChange={this.onChangeuName}
+									/>
+								</div>
 
-							<div className='basic-details'>
-								<label for='username'>Username:</label>
-								<input
-									type='text'
-									id='username'
-									name='username'
-									required
-									value={this.state.uName}
-									onChange={this.onChangeuName}
-								/>
+								<div className='basic-details'>
+									<label for='password'>Password:</label>
+									<input
+										type='password'
+										id='password'
+										name='password'
+										required
+										value={this.state.password}
+										onChange={this.onChangepassword}
+									/>
+								</div>
 							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
+							<div className='right'>
+								<div className='basic-details'>
+									<label htmlFor='fileInput'>
+										<p>Add Image</p>
+										<img src={draganddroiimage} alt='imageicon' />
+									</label>
+									<input
+										type='file'
+										id='fileInput'
+										value={this.state.image}
+										onChange={this.onChangeimage}
+									/>
+								</div>
+							</div>
 
-							<div className='basic-details'>
-								<label for='password'>Password:</label>
-								<input
-									type='password'
-									id='password'
-									name='password'
-									required
-									value={this.state.password}
-									onChange={this.onChangepassword}
-								/>
-							</div>
-							</td>
-							</tr>
-							<tr>
-								<td>
-						<div className='right'>
-							<div className='basic-details'>
-								<label htmlFor='fileInput'>
-									<p>Add Image</p>
-									<img src={draganddropimage} alt='imageicon' />
-								</label>
-								<input
-									type='file'
-									id='fileInput'
-									value={this.state.image}
-									onChange={this.onChangeimage}
-								/>
-							</div>
-						</div>
-						</td>
-						</tr>
-						<tr>
-							<td>
-
-						<button type='submit'>Save</button>
-					</td>
-					</tr>
-					</table>
+							<button type='submit'>Save</button>
+							</table>
 					</div>
-					</div>
+				</div>
 			</div>
 		);
 	}
