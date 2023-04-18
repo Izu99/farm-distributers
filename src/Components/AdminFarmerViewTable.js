@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/Clientable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import jsPDF from "jspdf";
+import 'jspdf-autotable';
 
 import FarmerThrowTable from "./FarmerThrowTable";
 
@@ -40,6 +42,32 @@ export default class Farmer extends Component {
 		});
 		
 	}
+
+	exportPDF = () => {
+        const unit = "pt";
+        const size = "A4"; // Use A1, A2, A3 or A4
+        const orientation = "portrait"; // portrait or landscape
+    
+        const marginLeft = 40;
+		const doc = new jsPDF(orientation, unit, size);
+    
+        doc.setFontSize(15);
+    
+        const title = "My All Repaire Report";
+        const headers = [["Clientname", "lName","dob", "pNumber","uName", "password", "email", "image"]];
+    
+        const data = this.state.farmer.map(elt=> [elt.vName, elt.lName,  elt.dob,elt.pNumber, elt.uName, elt.password, elt.email, elt.image]);
+    
+        let content = {
+          startY: 50,
+          head: headers,
+          body: data
+        };
+    
+        doc.text(title, marginLeft, 40);
+        doc.autoTable(content);
+        doc.save("report.pdf")
+      }
 
 	render() {
 		return (

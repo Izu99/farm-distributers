@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/Clientable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import jsPDF from "jspdf";
+import 'jspdf-autotable';
 
 import ClientTrowTable from "./ClientThrowTable";
 
@@ -42,6 +44,32 @@ export default class Client extends Component {
 		
 	}
 
+	exportPDF = () => {
+        const unit = "pt";
+        const size = "A4"; // Use A1, A2, A3 or A4
+        const orientation = "portrait"; // portrait or landscape
+    
+        const marginLeft = 40;
+		const doc = new jsPDF(orientation, unit, size);
+    
+        doc.setFontSize(15);
+    
+        const title = "My All Repaire Report";
+        const headers = [["Clientname", "lName","dob", "pNumber","uName", "password", "email", "image"]];
+    
+        const data = this.state.client.map(elt=> [elt.vName, elt.lName,  elt.dob,elt.pNumber, elt.uName, elt.password, elt.email, elt.image]);
+    
+        let content = {
+          startY: 50,
+          head: headers,
+          body: data
+        };
+    
+        doc.text(title, marginLeft, 40);
+        doc.autoTable(content);
+        doc.save("report.pdf")
+      }
+
 	render() {
 		return (
 			<div className='adminVehicleProfile'>
@@ -67,6 +95,9 @@ export default class Client extends Component {
 						</thead>
 						<tbody>{this.tabRow()}</tbody>
 					</table>
+					<center>
+                        <button onClick={() => this.exportPDF()}style={{background:'blue',padding:10, color:'white', border:'none',borderRadius:'20'}}>- Export All -</button>
+                    </center>
 				</div>
 				<br />
 				<br />
