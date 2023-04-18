@@ -43,6 +43,7 @@ export default class Product extends Component {
 		
 	}
 
+
 	exportPDF = () => {
         const unit = "pt";
         const size = "A4"; // Use A1, A2, A3 or A4
@@ -69,6 +70,7 @@ export default class Product extends Component {
         doc.save("report.pdf")
       }
 
+
 	render() {
 		return (
 			<div className='adminVehicleProfile'>
@@ -81,9 +83,10 @@ export default class Product extends Component {
 							<tr>
 								<th>Product Name</th>
 								<th>Location</th>
-								<th>Product ID</th>
-								<th>Customer</th>
-								<th>Image</th>
+								<th>PID</th>
+								<th>Customers</th>
+								<th>image</th>
+								
                                
 
 								<th colSpan='3'>Action</th>
