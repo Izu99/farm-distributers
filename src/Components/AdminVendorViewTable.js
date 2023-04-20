@@ -6,6 +6,15 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import jsPDF from "jspdf";
 import 'jspdf-autotable';
 
+import img1 from "../images/dashboard-icon.svg";
+import img2 from "../images/farmer-icon.svg";
+import img3 from "../images/vender-icon.svg";
+import img4 from "../images/products-icon.svg";
+import img5 from "../images/clients-icon.svg";
+
+import logo from "../images/navbar-logo.svg";
+import Header from "./NavBar";
+
 import VendorThowTable from "./VendorThowTable";
 
 export default class Vendor extends Component {
@@ -75,9 +84,52 @@ export default class Vendor extends Component {
 		return (
 			<div className='adminVehicleProfile'>
 			
-				<br /> <h3 align='center'>Vendor Management</h3>
+			<div className='left-sidebar'>
+				<img src={logo} alt='' className='header-logo' />
+				<a href='/dashboard'>
+					<div className='icon dashboard'>
+						<img src={img1} alt='icon1' />
+						<div className='text'>Dashboard</div>
+					</div>
+				</a>
+				<a href='/AdminFarmerViewTable'>
+					<div className='icon farmer'>
+						<img src={img2} alt='icon2' />
+						<div className='text'>Farmer</div>
+					</div>
+				</a>
+				<a href='/AdminVendorViewTable'>
+					<div className='icon vendor'>
+						<img src={img3} alt='icon3' />
+						<div className='text'>Vendor</div>
+					</div>
+				</a>
+				<a href='/AdminProductsViewTable'>
+					<div className='icon products'>
+						<img src={img4} alt='icon4' />
+						<div className='text'>Products</div>
+					</div>
+				</a>
+				<a href='/AdminClientViewTable'>
+					<div className='icon clients'>
+						<img src={img5} alt='icon5' />
+						<div className='text'>Clients</div>
+					</div>
+				</a>
+			</div>
+		
+
+			
+			<div className="right-side">
+			<Header />
+			
+			
+			<table class='table table-striped'>
+			<br /> <h2 align='center'>Vendor Management</h2>
 				<div className='row-frm'>
 				{/* <button><Link to={"/roomregister"} className="btn btn-success">Add Room</Link></button> */}
+					<input type="text" placeholder="Search..." className="search"/>
+				<button type="submit" className="search">Search</button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
@@ -96,12 +148,18 @@ export default class Vendor extends Component {
 						</thead>
 						<tbody>{this.tabRow()}</tbody>
 					</table>
+					<center>
+                        <button onClick={() => this.exportPDF()}style={{background:'blue',padding:10, color:'white', border:'none',borderRadius:'20'}}>- Export All -</button>
+                    </center>
 				</div>
 				<br />
 				<br />
 				<div>
 					<hr className='shadow-lg card-footer' />
 				</div>
+				</table>
+				</div>
+			
 				{/* <Footer /> */}
 			</div>
 		);
