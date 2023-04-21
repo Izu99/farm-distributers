@@ -107,9 +107,9 @@ export default class AddFarmer extends Component {
 			});
 			console.log(res.data);
 		});
-		this.props.history.push("/");
+		this.props.history.push("/AdminFarmerViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminFarmerViewTable");
 
 		// }
 		// else {

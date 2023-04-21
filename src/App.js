@@ -32,6 +32,10 @@ import AdminClientViewTable from "./Components/AdminClientViewTable";
 import AdminFarmerViewTable from "./Components/AdminFarmerViewTable";
 import AdminProductsViewTable from "./Components/AdminProductsViewTable";
 import AdminVendorViewTable from "./Components/AdminVendorViewTable";
+import FarmerSearch from "./Components/FarmerSearch";
+import VedorSearch from "./Components/VedorSearch";
+import ClientSearch from "./Components/ClientSearch";
+import ProductSearch from "./Components/ProductSearch";
 
 
 function App() {
@@ -66,6 +70,11 @@ function App() {
 						<Route path='/AdminFarmerViewTable' component={AdminFarmerViewTable} />
 						<Route path='/AdminProductsViewTable' component={AdminProductsViewTable} />
 						<Route path='/AdminVendorViewTable' component={AdminVendorViewTable} />
+
+						<Route  path='/FarmerSearch/:pathParam1?' component={FarmerSearch}/>
+						<Route  path='/VedorSearch/:pathParam1?' component={VedorSearch}/>
+						<Route  path='/ProductSearch/:pathParam1?' component={ProductSearch}/>
+						<Route  path='/ClientSearch/:pathParam1?' component={ClientSearch}/>
 
 						<Redirect path='/404' component={Login} />
 					</Switch>

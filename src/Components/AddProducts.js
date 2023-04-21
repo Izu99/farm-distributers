@@ -89,9 +89,9 @@ export default class AddProducts extends Component {
 				});
 				console.log(res.data);
 			});
-		this.props.history.push("/");
+		this.props.history.push("/AdminProductsViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminProductsViewTable");
 
 		
 	}

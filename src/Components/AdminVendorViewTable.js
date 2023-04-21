@@ -122,14 +122,19 @@ export default class Vendor extends Component {
 			
 			<div className="right-side">
 			<Header />
-			
+			<a href='/addvendor' className="addvendor">
+					Add Vendor <i class='fa-solid fa-plus'></i>
+				</a>
 			
 			<table class='table table-striped'>
 			<br /> <h2 align='center'>Vendor Management</h2>
+			
 				<div className='row-frm'>
-				{/* <button><Link to={"/roomregister"} className="btn btn-success">Add Room</Link></button> */}
-					<input type="text" placeholder="Search..." className="search"/>
-				<button type="submit" className="search">Search</button>
+				<form onSubmit={this.onSubmit}>
+					<input type="text" placeholder="Search..." className="search" required value={this.state.search} onChange = {this.onChangeSearch}/>
+				<button type="submit" className="search">  <a href ={"/VedorSearch/"+this.state.search} >Search</a></button>
+				</form>
+
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

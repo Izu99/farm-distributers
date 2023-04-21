@@ -90,6 +90,22 @@ farmerRoutes.route('/getall').get(function(req, res) {
     });
 });
 
+farmerRoutes.route('/mysearchorders/:pathParam1?').get(function (req, res){
+    let search = req.params.pathParam1;
+    // let email = req.params.pathParam2;
+    console.log("your search is "+search);
+
+    // Orders.find({$and:[{date : search},{email : email}]},function (err,srch){
+        Farmer.find({$and:[{$or: [{vName: search}, {lName: search},{pNumber: search},{email: search}]}]},function (err,srch){ 
+        if(err)
+            console.log(err);
+        else{
+            res.json(srch)
+        }
+    });
+
+});
+
 farmerRoutes.route('/login').post(function (req, res){
     let email = req.body.email;
     let password = req.body.password;

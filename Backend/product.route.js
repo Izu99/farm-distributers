@@ -16,6 +16,23 @@ productRoutes.route('/add').post(function (req,res){
 });
 
 
+
+productRoutes.route('/mysearchorders/:pathParam1?').get(function (req, res){
+    let search = req.params.pathParam1;
+    // let email = req.params.pathParam2;
+    console.log("your search is "+search);
+
+    // Orders.find({$and:[{date : search},{email : email}]},function (err,srch){
+        Product.find({$and:[{$or: [{pName: search}, {sLocation: search},{pID: search},{customers: search}]}]},function (err,srch){ 
+        if(err)
+            console.log(err);
+        else{
+            res.json(srch)
+        }
+    });
+
+});
+
 //mount product details
 productRoutes.route('/edit/:id').get(function (req,res){
     let id = req.params.id;

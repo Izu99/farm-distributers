@@ -109,9 +109,9 @@ export default class AddClients extends Component {
 			});
 			console.log(res.data);
 		});
-		this.props.history.push("/");
+		this.props.history.push("/AdminClientViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminClientViewTable");
 
 		// }
 		// else {

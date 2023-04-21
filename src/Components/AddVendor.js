@@ -109,9 +109,9 @@ export default class AddVendor extends Component {
 			});
 			console.log(res.data);
 		});
-		this.props.history.push("/");
+		this.props.history.push("/AdminVendorViewTable");
 
-		window.location.replace("/");
+		window.location.replace("/AdminVendorViewTable");
 
 		// }
 		// else {
