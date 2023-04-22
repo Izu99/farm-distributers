@@ -1,0 +1,57 @@
+.delete-confirmation {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 2.8rem 2rem;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	width: 30%;
+	border: 25px;
+}
+
+.delete-confirmation h2 {
+	margin-top: 0;
+	font-size: 1.2rem;
+}
+
+.delete-confirmation .buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8%;
+	width: 75%;
+	margin-left: 10%;
+}
+
+.delete-confirmation .buttons button {
+	width: 7.5rem;
+	border-radius: 5%;
+}
+
+.delete-confirmation .buttons .cancel-button {
+	background-color: #cccccc;
+	color: #1D371C;
+	border: none;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.delete-confirmation .buttons .delete-button {
+	background-color: #1D371C;
+	color: #ffffff;
+	border: none;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.delete-confirmation .buttons .cancel-button:hover {
+    background-color: #c2c0c0;
+    color: #1D371C;
+}
+
+.delete-confirmation .buttons .delete-button:hover {
+    background-color: #ffffff;
+    color: #1a3a19;
+    transition: 0.2s ease all;
+}

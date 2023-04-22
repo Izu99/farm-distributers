@@ -1,0 +1,114 @@
+
+
+.adminVehicleProfile {
+	text-align: left !important;
+	display: flex;
+}
+
+.adminVehicleProfile .right-side .main-header {
+	margin: 5% 12% 0 12%;
+	font-size: 1.8rem;
+}
+
+.adminVehicleProfile h2 {
+	font-size: 2.6rem;
+}
+
+.adminVehicleProfile table {
+	border-collapse: collapse;
+	width: 95%;
+	max-width: 100%;
+	margin: 1.5rem auto;
+}
+
+.adminVehicleProfile thead {
+	background-color: #1d371c;
+	color: #fff;
+	width: auto;
+}
+
+.adminVehicleProfile th,
+.adminVehicleProfile td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.adminVehicleProfile td {
+	font-weight: 450;
+	font-size: 1.2rem;
+	color: #252525;
+}
+
+
+.adminVehicleProfile .actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.adminVehicleProfile td.profile-actions {
+	display: flex;
+	align-items: center;
+	/* margin-top: 20px; */
+	/* margin-left: 6%; */
+}
+
+.adminVehicleProfile  td.profile-actions button, .adminVehicleProfile button:nth-child(2) {
+	vertical-align: center;
+	padding: 0.75rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #d9534f;
+	color: #fff;
+	font-weight: 550;
+	cursor: pointer;
+	width: 8.4rem;
+	font-size: 0.85rem;
+}
+
+.adminVehicleProfile td.profile-actions button:nth-child(1) {
+	background-color: #0eb424;
+	/* width: 6.4rem; */
+}
+
+.adminVehicleProfile td.profile-actions button:nth-child(1):hover {
+	background-color: #068d18;
+}
+
+.adminVehicleProfile .profile-actions button:hover {
+	background-color: #c9302c;
+}
+
+.adminVehicleProfile .profile-actions td:nth-child(2) {
+	/* margin-left: 35%; */
+}
+
+.adminVehicleProfile .profile-actions button a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.adminVehicleProfile input {
+	width: 12.8rem;
+	height: 2rem;
+	border: none;
+	margin-right: 2%;
+
+}
+
+.adminVehicleProfile button:nth-child(2) {
+	background-color: #0eb424;
+	/* border-radius: 15px;
+	width: 8rem;
+	height: 1.8rem;
+	border: none;
+	border-radius: 15px;
+	color: #ffffff;
+	margin-left: 1rem; */
+}
+
+.adminVehicleProfile button:nth-child(2):hover {
+	background-color: #8b8d06;
+}

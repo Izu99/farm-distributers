@@ -1,0 +1,71 @@
+.farmerPage {
+	display: flex;
+}
+.farmerPage {
+	text-align: left !important;
+}
+
+.farmerPage .main-header {
+	margin: 5% 12%;
+	font-size: 1.8rem;
+}
+
+.farmerPage a.addfarmer{
+	border: none;
+	background-color: #ffffff00;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
+	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
+}
+
+.farmerPage a.addfarmer i {
+	margin-left: 15px;
+	border-radius: 50%;
+	background-color: #1d371c;
+	padding: 0.6%;
+	color: #ffffff;
+	font-size: 0.8rem;
+}
+
+.farmerPage table {
+    margin-top: 5%;
+	width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.farmerPage table .users {
+    height: 76%;
+    border-width: 15px;	
+}
+
+.farmerPage .users .user {
+	border: 2px solid #a3a3a32f;
+    padding: 1%;
+	border-radius: 35px;
+	margin-bottom: 2%;
+}
+
+.farmerPage .users .user img {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	border: 1px solid #0000003b;
+	padding: 0.6%;
+}
+
+.farmerPage .users .user .details {
+     margin: -28% 0 0 30%;
+}
+
+.farmerPage .users .user .details h2 {
+    font-size: 1.4rem;
+}
+
+.farmerPage .users .user .details p {
+    margin-top: -6%;
+} 
