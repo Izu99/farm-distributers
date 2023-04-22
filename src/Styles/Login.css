@@ -75,3 +75,85 @@
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
 }
+
+@media only screen and (max-width: 1075px) {
+	.loginPage .leftSide {
+		width: 30%;
+	}
+
+	.loginPage .leftSide h2 {
+		position: absolute;
+		top: 55%;
+		left: 8%;
+		font-size: 2rem;
+		color: #ffffff;
+		font-weight: 550;
+	}
+
+	.loginPage .leftSide p {
+		position: absolute;
+		top: 65%;
+		left: 36%;
+		font-size: 1.2rem;
+		color: #ffffff;
+		font-weight: 450;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.loginPage .leftSide {
+		width: 30%;
+	}
+
+	.loginPage .leftSide h2 {
+		position: absolute;
+		top: 55%;
+		left: 8%;
+		font-size: 2rem;
+		color: #ffffff;
+		font-weight: 550;
+	}
+
+	.loginPage .leftSide p {
+		position: absolute;
+		top: 65%;
+		left: 36%;
+		font-size: 1.2rem;
+		color: #ffffff;
+		font-weight: 450;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.loginPage .leftSide {
+		width: 30%;
+	}
+
+	.loginPage .leftSide h2 {
+		position: absolute;
+		top: 55%;
+		left: 8%;
+		font-size: 1.6rem;
+		color: #ffffff;
+		font-weight: 550;
+	}
+
+	.loginPage .leftSide p {
+		position: absolute;
+		top: 65%;
+		left: 36%;
+		font-size: 1rem;
+		color: #ffffff;
+		font-weight: 450;
+	}
+
+	.loginPage .rightSide form input[type="text"],
+	.loginPage .rightSide form input[type="password"] {
+		width: 16rem;
+		height: 1.6rem;
+		padding-left: 8px;
+		border-radius: 6px6;
+		border: 1px solid #949292;
+		font-family: "Inter", sans-serif;
+	}
+}
