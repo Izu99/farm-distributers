@@ -120,7 +120,7 @@ export default class Farmer extends Component {
 			
 			<div className="right-side">
 			<Header />
-			<a href='addfarmer' className="addfarmer">
+			<a href='addfarmer' className="add">
 					Add Farmer <i class='fa-solid fa-plus'></i>
 				</a>
 

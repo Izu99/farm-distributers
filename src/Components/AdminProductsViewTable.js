@@ -123,7 +123,7 @@ export default class Product extends Component {
 			<div className="right-side">
 			<Header />
 
-			<a href='/addproducts' className="addproducts">
+			<a href='/addproducts' className="add">
 					Add Products <i class='fa-solid fa-plus'></i>
 				</a>
 			

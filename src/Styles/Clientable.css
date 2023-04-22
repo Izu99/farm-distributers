@@ -1,5 +1,3 @@
-
-
 .adminVehicleProfile {
 	text-align: left !important;
 	display: flex;
@@ -14,10 +12,9 @@
 	font-size: 2.6rem;
 }
 
-.adminVehicleProfile table {
+.adminVehicleProfile .right-side .table {
 	border-collapse: collapse;
-	width: 95%;
-	max-width: 100%;
+	width: 100%;
 	margin: 1.5rem auto;
 }
 
@@ -36,10 +33,9 @@
 
 .adminVehicleProfile td {
 	font-weight: 450;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #252525;
 }
-
 
 .adminVehicleProfile .actions {
 	display: flex;
@@ -55,16 +51,17 @@
 	/* margin-left: 6%; */
 }
 
-.adminVehicleProfile  td.profile-actions button, .adminVehicleProfile button:nth-child(2) {
+.adminVehicleProfile td.profile-actions button,
+.adminVehicleProfile button:nth-child(2) {
 	vertical-align: center;
-	padding: 0.75rem;
+	padding: 0.5rem;
 	border: none;
 	border-radius: 5px;
 	background-color: #d9534f;
 	color: #fff;
 	font-weight: 550;
 	cursor: pointer;
-	width: 8.4rem;
+	width: 6.4rem;
 	font-size: 0.85rem;
 }
 
@@ -95,7 +92,6 @@
 	height: 2rem;
 	border: none;
 	margin-right: 2%;
-
 }
 
 .adminVehicleProfile button:nth-child(2) {
@@ -110,5 +106,49 @@
 }
 
 .adminVehicleProfile button:nth-child(2):hover {
-	background-color: #8b8d06;
+	background-color: #8b8d06;
+}
+
+.adminVehicleProfile a.add {
+	display: block;
+	border: none;
+	background-color: #ffffff00;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
+	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
+	margin-top: 2rem;
+}
+
+.adminVehicleProfile a.add i {
+	margin-left: 15px;
+	border-radius: 50%;
+	background-color: #1d371c;
+	padding: 1%;
+	color: #ffffff;
+	font-size: 1rem;
+}
+
+.adminVehicleProfile .right-side .row-frm form {
+	margin-left: 2rem;
+}
+
+.adminVehicleProfile .right-side .row-frm form input[type=text] {
+	border: 1px solid #afa9a9;
+	border-radius: 15px;
+	padding-left: 15px;
+}
+
+.adminVehicleProfile .right-side .row-frm form button {
+
+}
+
+
+
+.adminVehicleProfile .right-side .row-frm form button a{
+	text-decoration: none;
+	color: #ffffff;
 }

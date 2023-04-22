@@ -122,7 +122,7 @@ export default class Client extends Component {
 			
 			<div className="right-side">
 			<Header />
-			<a href="/addclients" className="addclients">
+			<a href="/addclients" className="add">
 				Add Clients <i class='fa-solid fa-plus'></i>
 				</a>
 			
