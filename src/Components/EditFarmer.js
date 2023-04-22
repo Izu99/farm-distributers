@@ -142,39 +142,39 @@ export default class EditFarmer extends Component {
 	render() {
 		return (
 			<div className='EditFarmerPage'>
-				<div className='left-sidebar'>
-					<img src={logo} alt='' className='header-logo' />
-					<a href='/dashboard'>
-						<div className='icon dashboard'>
-							<img src={img1} alt='icon1' />
-							<div className='text'>Dashboard</div>
-						</div>
-					</a>
-					<a href='/farmer'>
-						<div className='icon farmer'>
-							<img src={img2} alt='icon2' />
-							<div className='text'>Farmer</div>
-						</div>
-					</a>
-					<a href='/vendor'>
-						<div className='icon vendor'>
-							<img src={img3} alt='icon3' />
-							<div className='text'>Vendor</div>
-						</div>
-					</a>
-					<a href='/product'>
-						<div className='icon products'>
-							<img src={img4} alt='icon4' />
-							<div className='text'>Products</div>
-						</div>
-					</a>
-					<a href='/clients'>
-						<div className='icon clients'>
-							<img src={img5} alt='icon5' />
-							<div className='text'>Clients</div>
-						</div>
-					</a>
-				</div>
+<div className='left-sidebar'>
+				<img src={logo} alt='' className='header-logo' />
+				<a href='/dashboard'>
+					<div className='icon dashboard'>
+						<img src={img1} alt='icon1' />
+						<div className='text'>Dashboard</div>
+					</div>
+				</a>
+				<a href='/AdminFarmerViewTable'>
+					<div className='icon farmer'>
+						<img src={img2} alt='icon2' />
+						<div className='text'>Farmer</div>
+					</div>
+				</a>
+				<a href='/AdminVendorViewTable'>
+					<div className='icon vendor'>
+						<img src={img3} alt='icon3' />
+						<div className='text'>Vendor</div>
+					</div>
+				</a>
+				<a href='/AdminProductsViewTable'>
+					<div className='icon products'>
+						<img src={img4} alt='icon4' />
+						<div className='text'>Products</div>
+					</div>
+				</a>
+				<a href='/AdminClientViewTable'>
+					<div className='icon clients'>
+						<img src={img5} alt='icon5' />
+						<div className='text'>Clients</div>
+					</div>
+				</a>
+			</div>
 				<div className='right-side'>
 					<Header />
 					<div className='EditClients'>

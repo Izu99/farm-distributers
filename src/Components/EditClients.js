@@ -38,27 +38,26 @@ export default class EditClients extends Component {
 		};
 	}
 
-
 	componentDidMount() {
-        // alert('edit id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/client/edit/'+this.props.match.params.id)
-            .then(res => {
-                this.setState({
-                    vName: res.data.vName,
-                    lName: res.data.lName,
-                    dob: res.data.dob,
-                    pNumber: res.data.pNumber,
+		// alert('edit id ' +this.props.match.params.id);
+		axios
+			.get("http://localhost:4000/client/edit/" + this.props.match.params.id)
+			.then((res) => {
+				this.setState({
+					vName: res.data.vName,
+					lName: res.data.lName,
+					dob: res.data.dob,
+					pNumber: res.data.pNumber,
 					email: res.data.email,
 					uName: res.data.uName,
 					password: res.data.password,
 					image: res.data.image,
-                   
-                });
-            })
-            .catch(function (error){
-                console.log("Can't Get Data");
-            })
-    }
+				});
+			})
+			.catch(function (error) {
+				console.log("Can't Get Data");
+			});
+	}
 
 	onChangevName(e) {
 		this.setState({
@@ -114,29 +113,29 @@ export default class EditClients extends Component {
 			image: this.state.image,
 		};
 
-		
-		axios.post('http://localhost:4000/client/update/'+this.props.match.params.id,obj)
-		.then((res) => {
-			alert(" Update Successfully");
-			this.setState({
-				vName: "",
-				lName: "",
-				dob: "",
-				pNumber: "",
-				uName: "",
-				password: "",
-				email: "",
-				image: "",
-				
+		axios
+			.post(
+				"http://localhost:4000/client/update/" + this.props.match.params.id,
+				obj
+			)
+			.then((res) => {
+				alert(" Update Successfully");
+				this.setState({
+					vName: "",
+					lName: "",
+					dob: "",
+					pNumber: "",
+					uName: "",
+					password: "",
+					email: "",
+					image: "",
+				});
+
+				console.log(res.data);
 			});
-		
-			console.log(res.data);
-		});
 		this.props.history.push("/AdminClientViewTable");
 
 		window.location.replace("/AdminClientViewTable");
-
-		
 	}
 
 	render() {
@@ -150,25 +149,25 @@ export default class EditClients extends Component {
 							<div className='text'>Dashboard</div>
 						</div>
 					</a>
-					<a href='/farmer'>
+					<a href='/AdminFarmerViewTable'>
 						<div className='icon farmer'>
 							<img src={img2} alt='icon2' />
 							<div className='text'>Farmer</div>
 						</div>
 					</a>
-					<a href='/vendor'>
+					<a href='/AdminVendorViewTable'>
 						<div className='icon vendor'>
 							<img src={img3} alt='icon3' />
 							<div className='text'>Vendor</div>
 						</div>
 					</a>
-					<a href='/product'>
+					<a href='/AdminProductsViewTable'>
 						<div className='icon products'>
 							<img src={img4} alt='icon4' />
 							<div className='text'>Products</div>
 						</div>
 					</a>
-					<a href='/clients'>
+					<a href='/AdminClientViewTable'>
 						<div className='icon clients'>
 							<img src={img5} alt='icon5' />
 							<div className='text'>Clients</div>
@@ -178,7 +177,6 @@ export default class EditClients extends Component {
 				<div className='right-side'>
 					<Header />
 					<div className='EditClients'>
-
 						<table>
 							<h2>Edit Clients</h2>
 							<div className='left'>
@@ -281,7 +279,7 @@ export default class EditClients extends Component {
 							</div>
 
 							<button type='submit'>Save</button>
-							</table>
+						</table>
 					</div>
 				</div>
 			</div>
