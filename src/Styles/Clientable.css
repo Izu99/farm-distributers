@@ -14,11 +14,11 @@
 	font-size: 2.6rem;
 }
 
-.adminVehicleProfile table {
+.adminVehicleProfile .right-side table {
 	border-collapse: collapse;
-	width: 95%;
+	width: 100%;
 	max-width: 100%;
-	margin: 1.5rem auto;
+	/* margin: 1.5rem auto; */
 }
 
 .adminVehicleProfile thead {
@@ -111,4 +111,27 @@
 
 .adminVehicleProfile button:nth-child(2):hover {
 	background-color: #8b8d06;
+}
+
+.adminVehicleProfile a.addfarmer{
+	display: block;
+	border: none;
+	background-color: #ffffff00;
+	margin-left: 72%;
+	font-size: 1.2rem;
+	width: 20%;
+	height: auto;
+	font-weight: 530;
+	text-decoration: none;
+	color: #1d371c;
+	margin-top: 2rem;
+}
+
+.adminVehicleProfile a.addfarmer i {
+	margin-left: 15px;
+	border-radius: 50%;
+	background-color: #1d371c;
+	padding: 1.2%;
+	color: #ffffff;
+	font-size: 1.2rem;
 }
