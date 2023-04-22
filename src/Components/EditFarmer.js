@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Styles/EditClients.css";
+import "../Styles/EditFarmer.css";
 import draganddroiimage from "../images/drag-and-drop-image.svg";
 import Header from "./NavBar";
 import axios from "axios";
@@ -141,7 +141,7 @@ export default class EditFarmer extends Component {
 
 	render() {
 		return (
-			<div className='EditClientsPage'>
+			<div className='EditFarmerPage'>
 				<div className='left-sidebar'>
 					<img src={logo} alt='' className='header-logo' />
 					<a href='/dashboard'>
@@ -180,7 +180,7 @@ export default class EditFarmer extends Component {
 					<div className='EditClients'>
 
 						<table>
-							<h2>Edit Clients</h2>
+							<h2>Edit Farmer</h2>
 							<div className='left'>
 								<div className='basic-details'>
 									<label for='first-name'>First Name:</label>
