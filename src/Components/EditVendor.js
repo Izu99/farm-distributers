@@ -180,7 +180,7 @@ export default class EditVendor extends Component {
 					<div className='EditClients'>
 
 						<table>
-							<h2>Edit Clients</h2>
+							<h2>Edit Vendor</h2>
 							<div className='left'>
 								<div className='basic-details'>
 									<label for='first-name'>First Name:</label>

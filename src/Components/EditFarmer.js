@@ -15,7 +15,7 @@ import logo from "../images/navbar-logo.svg";
 export default class EditFarmer extends Component {
 	constructor(props) {
 		super(props);
-		this.onChangevName = this.onChangevName.bind(this);
+		 this.onChangevName = this.onChangevName.bind(this);
 		this.onChangelName = this.onChangelName.bind(this);
 		this.onChangedob = this.onChangedob.bind(this);
 		this.onChangepNumber = this.onChangepNumber.bind(this);
@@ -27,7 +27,7 @@ export default class EditFarmer extends Component {
 		this.onSubmit = this.onSubmit.bind(this);
 
 		this.state = {
-			vName: "",
+			 vName: "",
 			lName: "",
 			dob: "",
 			pNumber: "",
@@ -45,7 +45,7 @@ export default class EditFarmer extends Component {
             .then(res => {
                 this.setState({
                     vName: res.data.vName,
-                    lName: res.data.lName,
+                     lName: res.data.lName,
                     dob: res.data.dob,
                     pNumber: res.data.pNumber,
 					email: res.data.email,
@@ -60,11 +60,11 @@ export default class EditFarmer extends Component {
             })
     }
 
-	onChangevName(e) {
-		this.setState({
-			vName: e.target.value,
-		});
-	}
+	 onChangevName(e) {
+	 	this.setState({
+	 		vName: e.target.value,
+	 	});
+	 }
 	onChangelName(e) {
 		this.setState({
 			lName: e.target.value,

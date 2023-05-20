@@ -154,6 +154,9 @@ export default class Product extends Component {
 							</thead>
 							<tbody>{this.tabRow()}</tbody>
 						</table>
+						<center>
+                        <button onClick={() => this.exportPDF()}style={{background:'blue',padding:10, color:'white', border:'none',borderRadius:'20'}}>- Export All -</button>
+                    </center>
 					</div>
 				</div>
 				<br />
